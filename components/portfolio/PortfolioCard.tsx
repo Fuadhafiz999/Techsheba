@@ -3,25 +3,31 @@
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 import type { CaseStudy } from "@/data/mockData";
-import { Badge } from "@/components/ui/badge";
 
 type PortfolioCardProps = {
   study: CaseStudy;
   priority?: boolean;
 };
 
+function resultLabel(study: CaseStudy) {
+  const r = study.results[0];
+  return `${r.prefix ?? ""}${r.value}${r.suffix ?? ""} ${r.label}`;
+}
+
 export function PortfolioCard({ study, priority = false }: PortfolioCardProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const reduce = useReducedMotion();
 
   const handleEnter = () => {
     const v = videoRef.current;
-    if (!v) return;
+    if (!v || reduce) return;
     v.muted = true;
     v.play().catch(() => {
-      /* autoplay may be blocked — poster stays */
+      /* autoplay may be blocked - poster stays */
     });
   };
 
@@ -61,36 +67,21 @@ export function PortfolioCard({ study, priority = false }: PortfolioCardProps) {
             className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
-
-        {/* Top row */}
-        <div className="absolute inset-x-0 top-0 flex items-center justify-between p-4">
-          <Badge
-            variant="outline"
-            className="border-white/20 bg-black/40 text-[0.65rem] font-semibold tracking-wider text-white uppercase backdrop-blur-sm"
-          >
-            {study.category}
-          </Badge>
-          <span className="rounded-full border border-white/20 bg-black/40 px-2.5 py-0.5 text-[0.65rem] font-medium text-white/90 backdrop-blur-sm">
-            {study.year}
-          </span>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
         {/* Bottom info */}
-        <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-          <h3 className="font-display text-lg font-bold text-white sm:text-xl">
+        <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+          <p className="text-xs font-medium text-white/60">
+            {study.category} · {study.year} · {resultLabel(study)}
+          </p>
+          <h3 className="mt-2 font-display text-xl font-bold text-white sm:text-2xl">
             {study.title}
           </h3>
-          <p className="mt-1 line-clamp-2 text-xs text-white/75 sm:text-sm">
-            {study.short}
-          </p>
           <div className="mt-3 flex items-center justify-between gap-3">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-500/90 px-3 py-1 text-xs font-semibold text-white">
-              {study.results[0].prefix}
-              {study.results[0].value}
-              {study.results[0].suffix} {study.results[0].label}
-            </span>
-            <span className="grid size-8 translate-y-1 place-items-center rounded-full bg-white text-slate-900 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+            <p className="line-clamp-2 text-xs text-white/75 sm:text-sm">
+              {study.short}
+            </p>
+            <span className="grid size-9 shrink-0 translate-y-1 place-items-center rounded-full bg-white text-slate-900 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
               <ArrowUpRight className="size-4" />
             </span>
           </div>

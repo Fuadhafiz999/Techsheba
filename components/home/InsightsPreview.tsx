@@ -15,14 +15,13 @@ export function InsightsPreview() {
         <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <SectionHeading
             align="left"
-            eyebrow="Insights & resources"
             title={
               <>
                 Growth advice we&apos;d give{" "}
-                <span className="text-gradient">our own clients</span>
+                <span className="text-brand-accent">our own clients</span>
               </>
             }
-            description="Practical guides on web performance, conversion, pricing and more — no fluff, no jargon."
+            description="Practical guides on web performance, conversion, pricing and more, no fluff, no jargon."
           />
           <Reveal delay={0.15} className="shrink-0">
             <CTAButton href="/blog" variant="outline">

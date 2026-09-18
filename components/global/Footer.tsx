@@ -22,7 +22,7 @@ export function Footer() {
           <div className="flex flex-col gap-5">
             <Logo />
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-              {siteConfig.tagline} from Dhaka, Bangladesh — building
+              {siteConfig.tagline} from Dhaka, Bangladesh, building
               high-performance digital products and campaigns for brands
               worldwide.
             </p>
@@ -34,7 +34,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="grid size-9 place-items-center rounded-full border border-border bg-white/5 text-muted-foreground transition-all hover:border-brand-500/40 hover:text-foreground"
+                  className="grid size-9 place-items-center rounded-full border border-border bg-surface-raised text-muted-foreground transition hover:border-brand-500/40 hover:text-foreground"
                 >
                   <Icon className="size-4" />
                 </a>
@@ -123,8 +123,7 @@ export function Footer() {
             reserved.
           </p>
           <p className="text-xs text-muted-foreground">
-            Made with <span className="text-brand-accent">♥</span> in Dhaka,
-            Bangladesh 🇧🇩 · Developed by{" "}
+            Made with care in Dhaka, Bangladesh · Developed by{" "}
             <a
               href="https://ahshanhafizfuad.netlify.app/"
               target="_blank"

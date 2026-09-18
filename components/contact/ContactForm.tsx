@@ -14,9 +14,9 @@ import { Label } from "@/components/ui/label";
 
 const budgetOptions = [
   "Under $1,000",
-  "$1,000 – $5,000",
-  "$5,000 – $15,000",
-  "$15,000 – $50,000",
+  "$1,000 - $5,000",
+  "$5,000 - $15,000",
+  "$15,000 - $50,000",
   "$50,000+",
 ];
 
@@ -34,7 +34,7 @@ const contactSchema = z.object({
 type ContactValues = z.infer<typeof contactSchema>;
 
 const inputClasses =
-  "h-11 rounded-xl border-input bg-white/[0.03] px-4 text-sm focus-visible:ring-brand-500/40";
+  "h-11 rounded-xl border-input bg-surface-raised px-4 text-sm focus-visible:ring-brand-500/40";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -79,14 +79,14 @@ export function ContactForm() {
         <span className="grid size-14 place-items-center rounded-full bg-emerald-400/15 text-emerald-400">
           <CircleCheckBig className="size-7" />
         </span>
-        <h3 className="font-display text-xl font-bold">Message ready! 🎉</h3>
+        <h3 className="font-display text-xl font-bold">Your message is ready</h3>
         <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-          We&apos;ve opened WhatsApp with your brief pre-filled — hit send and
+          We&apos;ve opened WhatsApp with your brief pre-filled. Hit send and
           our team will reply within a few hours (max 24h).
         </p>
         <a
           href={`mailto:${siteConfig.email}`}
-          className="text-sm font-medium text-brand-accent hover:text-brand-accent"
+          className="text-sm font-medium text-brand-accent hover:underline"
         >
           Prefer email? {siteConfig.email}
         </a>
@@ -108,6 +108,7 @@ export function ContactForm() {
           <Input
             id="name"
             placeholder="Your name"
+            autoComplete="name"
             aria-invalid={!!errors.name}
             className={cn(inputClasses, errors.name && "border-destructive")}
             {...register("name")}
@@ -124,6 +125,7 @@ export function ContactForm() {
             id="email"
             type="email"
             placeholder="you@company.com"
+            autoComplete="email"
             aria-invalid={!!errors.email}
             className={cn(inputClasses, errors.email && "border-destructive")}
             {...register("email")}
@@ -143,6 +145,7 @@ export function ContactForm() {
             id="phone"
             type="tel"
             placeholder="+880 1XXX-XXXXXX"
+            autoComplete="tel"
             className={inputClasses}
             {...register("phone")}
           />
@@ -219,7 +222,7 @@ export function ContactForm() {
           placeholder="Goals, timeline, anything you've tried before…"
           aria-invalid={!!errors.message}
           className={cn(
-            "min-h-32 rounded-xl border-input bg-white/[0.03] px-4 py-3 text-sm focus-visible:ring-brand-500/40",
+            "min-h-32 rounded-xl border-input bg-surface-raised px-4 py-3 text-sm focus-visible:ring-brand-500/40",
             errors.message && "border-destructive"
           )}
           {...register("message")}
@@ -232,22 +235,22 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-brand-500 px-8 text-sm font-semibold text-white shadow-[0_8px_32px_rgba(124,92,255,0.35)] transition-all duration-300 hover:bg-brand-600 disabled:opacity-60"
+        className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-brand-600 px-8 text-sm font-semibold text-white shadow-[0_8px_32px_rgba(106,75,240,0.35)] transition duration-300 hover:bg-brand-700 disabled:opacity-60"
       >
         {isSubmitting ? (
           <LoaderCircle className="size-4 animate-spin" />
         ) : (
           <Send className="size-4" />
         )}
-        Send message — we reply within 24h
+        Send message: we reply within 24h
       </button>
 
       <p className="text-center text-xs text-muted-foreground">
-        Submitting opens WhatsApp with your brief pre-filled — no account
+        Submitting opens WhatsApp with your brief pre-filled, no account
         needed. Prefer email?{" "}
         <a
           href={`mailto:${siteConfig.email}`}
-          className="font-medium text-brand-accent hover:text-brand-accent"
+          className="font-medium text-brand-accent hover:underline"
         >
           {siteConfig.email}
         </a>

@@ -1,10 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Geist, Space_Grotesk } from "next/font/google";
 
 import "./globals.css";
 
 import { siteConfig } from "@/data/mockData";
-import { colors } from "@/config/theme";
 import { ThemeProvider } from "@/components/global/ThemeProvider";
 import { ThemeScript } from "@/components/global/ThemeScript";
 import { SmoothScroll } from "@/components/global/SmoothScroll";
@@ -13,9 +12,9 @@ import { Footer } from "@/components/global/Footer";
 import { WhatsAppButton } from "@/components/global/WhatsAppButton";
 import { StickyMobileBar } from "@/components/global/StickyMobileBar";
 
-const inter = Inter({
+const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-geist",
   display: "swap",
 });
 
@@ -30,8 +29,7 @@ const siteUrl = `https://${siteConfig.domain}`;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default:
-      "Techsheba — Digital Agency in Dhaka | Web, App, Design & Marketing",
+    default: "Techsheba | Digital Agency in Dhaka | Web, App, Design & Marketing",
     template: "%s | Techsheba",
   },
   description: siteConfig.description,
@@ -52,12 +50,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: siteConfig.name,
-    title: "Techsheba — We turn clicks into customers",
+    title: "Techsheba | We turn clicks into customers",
     description: siteConfig.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Techsheba — We turn clicks into customers",
+    title: "Techsheba | We turn clicks into customers",
     description: siteConfig.description,
   },
   icons: {
@@ -66,7 +64,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: colors.background,
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#06070C" },
+    { media: "(prefers-color-scheme: light)", color: "#F6F7F9" },
+  ],
 };
 
 const organizationJsonLd = {
@@ -97,10 +98,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable}`}
+      className={`${geist.variable} ${spaceGrotesk.variable}`}
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-full focus:bg-brand-600 focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
         <ThemeScript />
         <script
           type="application/ld+json"
@@ -109,7 +116,7 @@ export default function RootLayout({
         <ThemeProvider>
           <SmoothScroll>
             <Navbar />
-            <main className="flex min-h-screen flex-col">{children}</main>
+            <main id="main-content" className="flex min-h-screen flex-col">{children}</main>
             <Footer />
             <WhatsAppButton />
             <StickyMobileBar />

@@ -60,7 +60,7 @@ export const siteConfig = {
   domain: "techsheba.com",
   tagline: "Full-service digital agency",
   description:
-    "Techsheba is a full-service digital agency from Dhaka, Bangladesh — building high-performance websites, mobile apps, brands and marketing campaigns for ambitious companies worldwide.",
+    "Techsheba is a full-service digital agency from Dhaka, Bangladesh, building high-performance websites, mobile apps, brands and marketing campaigns for ambitious companies worldwide.",
   email: "hello@techsheba.com",
   phone: "+880 1712-345678",
   phoneHref: "+8801712345678",
@@ -68,7 +68,7 @@ export const siteConfig = {
   whatsappMessage:
     "Hi Techsheba! I'd like to discuss a project with your team.",
   address: "Level 4, House 12, Road 5, Banani, Dhaka 1213, Bangladesh",
-  hours: "Sat – Thu · 10:00 – 19:00 (GMT+6)",
+  hours: "Sat - Thu · 10:00 - 19:00 (GMT+6)",
   founded: 2017,
   /** Replace with your real Calendly link. */
   calendlyUrl: "https://calendly.com/techsheba/discovery-call",
@@ -124,7 +124,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: "tech",
     title: "Tech & Web",
     short:
-      "Websites, landing pages and business pages — designed, built and launched for you.",
+      "Websites, landing pages and business pages, designed, built and launched for you.",
   },
   {
     slug: "creative",
@@ -136,7 +136,7 @@ export const serviceCategories: ServiceCategory[] = [
     slug: "digital-marketing",
     title: "Digital Marketing",
     short:
-      "SEO, SEM, social media and lead generation — campaigns engineered for measurable ROI.",
+      "SEO, SEM, social media and lead generation: campaigns engineered for measurable ROI.",
   },
 ];
 
@@ -161,7 +161,7 @@ export const services: Service[] = [
     category: "creative",
     tagline: "A mark your customers will remember",
     description:
-      "Distinctive logo concepts, refined with you — delivered in every format your brand will ever need.",
+      "Distinctive logo concepts, refined with you, delivered in every format your brand will ever need.",
     icon: PenTool,
     image: px(887751),
     deliverables: [
@@ -173,7 +173,7 @@ export const services: Service[] = [
       "Brand presentation deck",
     ],
     problem:
-      "A forgettable logo makes a forgettable brand — and 11 million logos are launched every year competing for the same attention.",
+      "A forgettable logo makes a forgettable brand, and 11 million logos are launched every year competing for the same attention.",
     solution:
       "We design with strategy, not templates: research your market, sketch 50+ directions, and refine the winner to perfection.",
     outcomes: [
@@ -188,7 +188,7 @@ export const services: Service[] = [
     category: "digital-marketing",
     tagline: "Paid & organic social that builds your audience",
     description:
-      "Scroll-stopping content plus laser-targeted ads — we grow your following and turn it into customers across every major platform.",
+      "Scroll-stopping content plus laser-targeted ads: we grow your following and turn it into customers across every major platform.",
     icon: Share2,
     image: px(3861969),
     deliverables: [
@@ -200,9 +200,9 @@ export const services: Service[] = [
       "Analytics & A/B testing",
     ],
     problem:
-      "Posting without a strategy is shouting into the void — most brands gain followers who never become buyers.",
+      "Posting without a strategy is shouting into the void. Most brands gain followers who never become buyers.",
     solution:
-      "We pair content people actually want to share with paid amplification aimed at your exact buyer — so reach converts, not just entertains.",
+      "We pair content people actually want to share with paid amplification aimed at your exact buyer, so reach converts, not just entertains.",
     outcomes: [
       { value: "3.2×", label: "average engagement growth" },
       { value: "+58%", label: "follower growth" },
@@ -215,7 +215,7 @@ export const services: Service[] = [
     category: "creative",
     tagline: "Complete brand identities that make you unforgettable",
     description:
-      "Strategy, visual identity and guidelines — a full brand platform that makes you look established from day one.",
+      "Strategy, visual identity and guidelines: a full brand platform that makes you look established from day one.",
     icon: Palette,
     image: px(1779487),
     deliverables: [
@@ -226,9 +226,9 @@ export const services: Service[] = [
       "Collateral & launch kit",
     ],
     problem:
-      "A generic, DIY brand makes customers and investors hesitate — you lose trust (and deals) before you even get a meeting.",
+      "A generic, DIY brand makes customers and investors hesitate. You lose trust (and deals) before you even get a meeting.",
     solution:
-      "We build a distinctive, disciplined identity system rooted in strategy — so every touchpoint looks intentional and premium.",
+      "We build a distinctive, disciplined identity system rooted in strategy, so every touchpoint looks intentional and premium.",
     outcomes: [
       { value: "3×", label: "social engagement after rebrand" },
       { value: "+27%", label: "brand recall in testing" },
@@ -253,9 +253,9 @@ export const services: Service[] = [
       "Conversion reporting",
     ],
     problem:
-      "A business without leads is a business on pause — but most lead spend leaks through weak funnels and untracked forms.",
+      "A business without leads is a business on pause, but most lead spend leaks through weak funnels and untracked forms.",
     solution:
-      "We build trackable funnels end-to-end: the right offer, the right page, the right follow-up — so every taka earns its place.",
+      "We build trackable funnels end-to-end: the right offer, the right page, the right follow-up, so every taka earns its place.",
     outcomes: [
       { value: "3.4×", label: "qualified leads" },
       { value: "-38%", label: "cost per lead" },
@@ -268,7 +268,7 @@ export const services: Service[] = [
     category: "digital-marketing",
     tagline: "Campaigns engineered for measurable ROI",
     description:
-      "SEO, Google & Meta ads, social media and email automation — a full-funnel growth engine with transparent reporting on every taka and dollar.",
+      "SEO, Google & Meta ads, social media and email automation: a full-funnel growth engine with transparent reporting on every taka and dollar.",
     icon: Megaphone,
     image: px(590016),
     deliverables: [
@@ -282,7 +282,7 @@ export const services: Service[] = [
     problem:
       "Most marketing budgets leak: untracked spend, generic content and no attribution make it impossible to know what actually works.",
     solution:
-      "We build measurement-first funnels — every campaign tied to a target metric, tested relentlessly, and reported in plain language.",
+      "We build measurement-first funnels: every campaign tied to a target metric, tested relentlessly, and reported in plain language.",
     outcomes: [
       { value: "3.4×", label: "organic traffic growth" },
       { value: "+212%", label: "average ROAS across clients" },
@@ -295,7 +295,7 @@ export const services: Service[] = [
     category: "creative",
     tagline: "Scroll-stopping motion content",
     description:
-      "Explainer films, product demos, social reels and brand showreels — motion content engineered to be watched, shared and remembered.",
+      "Explainer films, product demos, social reels and brand showreels: motion content engineered to be watched, shared and remembered.",
     icon: Clapperboard,
     image: px(1493112),
     deliverables: [
@@ -307,7 +307,7 @@ export const services: Service[] = [
       "Captions & subtitles",
     ],
     problem:
-      "Attention is the scarcest resource online — 80% of people skip video ads, and static content can't hold a modern audience.",
+      "Attention is the scarcest resource online. 80% of people skip video ads, and static content can't hold a modern audience.",
     solution:
       "We craft story-first motion with sound design, pacing and hooks proven to hold attention in the first 3 seconds.",
     outcomes: [
@@ -322,7 +322,7 @@ export const services: Service[] = [
     category: "creative",
     tagline: "Visuals that stop the scroll and sell the story",
     description:
-      "Social creatives, ad banners, decks and print — on-brand graphics delivered fast, in any volume.",
+      "Social creatives, ad banners, decks and print: on-brand graphics delivered fast, in any volume.",
     icon: Paintbrush,
     image: px(106344),
     deliverables: [
@@ -334,7 +334,7 @@ export const services: Service[] = [
       "Brand kit maintenance",
     ],
     problem:
-      "Inconsistent, off-brand visuals erode trust — and generic templates make your business look like everyone else.",
+      "Inconsistent, off-brand visuals erode trust, and generic templates make your business look like everyone else.",
     solution:
       "We build a reusable creative system from your brand, then produce assets that look sharp everywhere they appear.",
     outcomes: [
@@ -349,7 +349,7 @@ export const services: Service[] = [
     category: "tech",
     tagline: "Your business, found and trusted everywhere",
     description:
-      "Facebook, Instagram, Google Business Profile and WhatsApp Business — set up, optimized and ready to bring customers in.",
+      "Facebook, Instagram, Google Business Profile and WhatsApp Business: set up, optimized and ready to bring customers in.",
     icon: Store,
     image: px(190819),
     deliverables: [
@@ -361,7 +361,7 @@ export const services: Service[] = [
       "30-day launch management",
     ],
     problem:
-      "An incomplete or unverified business profile makes customers doubt you — and sends them to competitors who look ready.",
+      "An incomplete or unverified business profile makes customers doubt you, and sends them to competitors who look ready.",
     solution:
       "We set up and fully optimize every profile that matters, with consistent branding and messaging across all of them.",
     outcomes: [
@@ -376,7 +376,7 @@ export const services: Service[] = [
     category: "digital-marketing",
     tagline: "Your accounts, handled end-to-end",
     description:
-      "Daily posting, community replies and monthly reporting — we run your social presence so you can run your business.",
+      "Daily posting, community replies and monthly reporting: we run your social presence so you can run your business.",
     icon: Users,
     image: px(3182773),
     deliverables: [
@@ -387,9 +387,9 @@ export const services: Service[] = [
       "Monthly performance reports",
     ],
     problem:
-      "Posting inconsistently or ignoring comments quietly kills your reach — and customers notice when nobody answers.",
+      "Posting inconsistently or ignoring comments quietly kills your reach, and customers notice when nobody answers.",
     solution:
-      "A consistent content rhythm with fast community response — the two habits that keep algorithms and customers happy.",
+      "A consistent content rhythm with fast community response: the two habits that keep algorithms and customers happy.",
     outcomes: [
       { value: "5+", label: "posts every week" },
       { value: "2×", label: "engagement growth" },
@@ -402,7 +402,7 @@ export const services: Service[] = [
     category: "digital-marketing",
     tagline: "Rank on Google for searches that matter",
     description:
-      "Technical, on-page and content SEO that moves you up the rankings — and keeps you there.",
+      "Technical, on-page and content SEO that moves you up the rankings, and keeps you there.",
     icon: Search,
     image: px(933054),
     deliverables: [
@@ -414,7 +414,7 @@ export const services: Service[] = [
       "Ranking & traffic reports",
     ],
     problem:
-      "Invisible on Google means invisible to buyers — 75% of searchers never scroll past the first page.",
+      "Invisible on Google means invisible to buyers. 75% of searchers never scroll past the first page.",
     solution:
       "We fix what's blocking you (speed, structure, content) and build the assets Google rewards, month after month.",
     outcomes: [
@@ -429,7 +429,7 @@ export const services: Service[] = [
     category: "digital-marketing",
     tagline: "Google & Bing ads that convert, not just click",
     description:
-      "Paid search campaigns structured, measured and optimized for one thing — profitable customers.",
+      "Paid search campaigns structured, measured and optimized for one thing: profitable customers.",
     icon: MousePointerClick,
     image: px(265667),
     deliverables: [
@@ -441,7 +441,7 @@ export const services: Service[] = [
       "Monthly optimization",
     ],
     problem:
-      "Badly structured ad accounts burn budget on clicks that never become customers — with no way to see the leak.",
+      "Badly structured ad accounts burn budget on clicks that never become customers, with no way to see the leak.",
     solution:
       "We build tight account structures with conversion tracking from day one, then optimize toward ROAS every week.",
     outcomes: [
@@ -468,9 +468,9 @@ export const services: Service[] = [
       "Pixel & analytics setup",
     ],
     problem:
-      "Sending campaign traffic to your homepage is like inviting buyers to a warehouse — they can't find the checkout.",
+      "Sending campaign traffic to your homepage is like inviting buyers to a warehouse. They can't find the checkout.",
     solution:
-      "One page, one message, one action — designed around your ad promise so every click lands on a purpose-built offer.",
+      "One page, one message, one action: designed around your ad promise so every click lands on a purpose-built offer.",
     outcomes: [
       { value: "+38%", label: "conversion rate" },
       { value: "1.2s", label: "average load time" },
@@ -483,7 +483,7 @@ export const services: Service[] = [
     category: "tech",
     tagline: "Websites that look world-class and sell on every device",
     description:
-      "Custom design and development — fast, responsive and SEO-ready, from a single landing page to a full platform.",
+      "Custom design and development: fast, responsive and SEO-ready, from a single landing page to a full platform.",
     icon: CodeXml,
     image: px(574071),
     deliverables: [
@@ -496,7 +496,7 @@ export const services: Service[] = [
       "Ongoing support & maintenance",
     ],
     problem:
-      "Slow, outdated websites quietly cost you sales — 53% of visitors leave a page that takes over 3 seconds to load.",
+      "Slow, outdated websites quietly cost you sales. 53% of visitors leave a page that takes over 3 seconds to load.",
     solution:
       "We build conversion-first websites: sub-second loads, airtight UX and search-ready architecture that turns traffic into revenue.",
     outcomes: [
@@ -538,7 +538,7 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "finsolve",
-    title: "FinSolve — Banking Dashboard Redesign",
+    title: "FinSolve: Banking Dashboard Redesign",
     client: "FinSolve",
     industry: "Fintech & Banking",
     category: "Design",
@@ -547,7 +547,7 @@ export const caseStudies: CaseStudy[] = [
     cover: px(4348401),
     video: videos.showreel,
     short:
-      "A complex banking dashboard reimagined — 3.2× faster onboarding and 42% fewer support tickets.",
+      "A complex banking dashboard reimagined: 3.2× faster onboarding and 42% fewer support tickets.",
     challenge:
       "FinSolve's legacy dashboard buried key actions behind a 14-step onboarding flow. 62% of new users dropped off before making their first transfer, and support was drowning in 'where is this button?' tickets.",
     solution:
@@ -563,7 +563,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "lumiere",
-    title: "Lumière — Fashion E-commerce That Sells",
+    title: "Lumière: Fashion E-commerce That Sells",
     client: "Lumière",
     industry: "Fashion Retail",
     category: "Web",
@@ -571,7 +571,7 @@ export const caseStudies: CaseStudy[] = [
     year: "2025",
     cover: px(1478442),
     short:
-      "A headless storefront that loads in 1.2s — and lifted conversion rate by 212%.",
+      "A headless storefront that loads in 1.2s, and lifted conversion rate by 212%.",
     challenge:
       "Lumière's WordPress store took 7+ seconds to load and 74% of mobile visitors bounced. Every flash sale crashed the server, and abandoned carts were piling up.",
     solution:
@@ -587,7 +587,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "pathly",
-    title: "Pathly — Logistics App for 50K Drivers",
+    title: "Pathly: Logistics App for 50K Drivers",
     client: "Pathly",
     industry: "Logistics",
     category: "App",
@@ -597,7 +597,7 @@ export const caseStudies: CaseStudy[] = [
     short:
       "A route-optimization app that cut delivery times 18% and earned a 4.8★ store rating.",
     challenge:
-      "Pathly's dispatchers ran everything on spreadsheets — drivers took inefficient routes, updates arrived late, and the company was bleeding margins on fuel and failed deliveries.",
+      "Pathly's dispatchers ran everything on spreadsheets. Drivers took inefficient routes, updates arrived late, and the company was bleeding margins on fuel and failed deliveries.",
     solution:
       "We designed and shipped a React Native app with a smart routing engine, real-time GPS tracking and offline mode. Drivers onboarded in minutes, and dispatch time dropped from hours to seconds.",
     results: [
@@ -611,7 +611,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "halo",
-    title: "Halo — SaaS Marketing Site & Funnel",
+    title: "Halo: SaaS Marketing Site & Funnel",
     client: "Halo Analytics",
     industry: "B2B SaaS",
     category: "Marketing",
@@ -622,7 +622,7 @@ export const caseStudies: CaseStudy[] = [
     short:
       "A full-funnel rebuild: 3.4× organic traffic, +212% ROAS and a 31% lower CAC.",
     challenge:
-      "Halo was invisible on Google, and their paid ads were burning budget with no attribution. The site talked features, not outcomes — and it showed in the pipeline.",
+      "Halo was invisible on Google, and their paid ads were burning budget with no attribution. The site talked features, not outcomes, and it showed in the pipeline.",
     solution:
       "We rebuilt the site around customer pain points, shipped a content engine that owns 200+ search terms, and took over paid media with strict ROAS targets. Cost per lead fell 31% in one quarter.",
     results: [
@@ -636,7 +636,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "bondly",
-    title: "Bondly — Startup Brand Identity",
+    title: "Bondly: Startup Brand Identity",
     client: "Bondly",
     industry: "Fintech SaaS",
     category: "Design",
@@ -648,7 +648,7 @@ export const caseStudies: CaseStudy[] = [
     challenge:
       "Bondly had a working product but a throwaway look. Investors kept asking 'who are you again?' and the team knew the brand was costing them credibility.",
     solution:
-      "We delivered brand strategy, a full identity system, guidelines, pitch deck and launch site — then rolled the new brand across social. Three months later Bondly announced their seed round.",
+      "We delivered brand strategy, a full identity system, guidelines, pitch deck and launch site, then rolled the new brand across social. Three months later Bondly announced their seed round.",
     results: [
       { value: 2.4, prefix: "$", suffix: "M", label: "seed round raised" },
       { value: 3, prefix: "×", suffix: "", label: "social engagement" },
@@ -660,7 +660,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "nordica",
-    title: "Nordica — Motion Campaign, 8M+ Views",
+    title: "Nordica: Motion Campaign, 8M+ Views",
     client: "Nordica Travel",
     industry: "Travel",
     category: "Marketing",
@@ -669,11 +669,11 @@ export const caseStudies: CaseStudy[] = [
     cover: px(257904),
     video: videos.creative,
     short:
-      "A launch film plus 60 reels — 8.4M views and 64% more bookings in 90 days.",
+      "A launch film plus 60 reels: 8.4M views and 64% more bookings in 90 days.",
     challenge:
       "Nordica's ads were being skipped into oblivion. Brand awareness was near zero outside their home market, and bookings were flat despite heavy spend.",
     solution:
-      "We produced a 30-second brand film and a systematic short-form reel engine — 5 formats, one hook structure — then amplified the winners with paid media. Three of the reels passed 1M organic views.",
+      "We produced a 30-second brand film and a systematic short-form reel engine, 5 formats, one hook structure, then amplified the winners with paid media. Three of the reels passed 1M organic views.",
     results: [
       { value: 8.4, prefix: "", suffix: "M", label: "campaign views" },
       { value: 190, prefix: "+", suffix: "%", label: "watch time" },
@@ -716,7 +716,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "From first call to app-store launch in nine weeks. Our drivers genuinely love the app — it's holding a 4.8-star rating.",
+      "From first call to app-store launch in nine weeks. Our drivers genuinely love the app. It's holding a 4.8-star rating.",
     name: "Rajib Hasan",
     role: "CEO",
     company: "Pathly",
@@ -734,7 +734,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "The identity they built gave us the confidence — and the credibility — to close our seed round. Worth every dollar.",
+      "The identity they built gave us the confidence, and the credibility, to close our seed round. Worth every dollar.",
     name: "Daniel Okafor",
     role: "Founder",
     company: "Bondly",
@@ -752,7 +752,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "8.4 million views on our launch film. The motion team just gets it — story, pacing, sound, all of it.",
+      "8.4 million views on our launch film. The motion team just gets it: story, pacing, sound, all of it.",
     name: "Jonas Weber",
     role: "Marketing Director",
     company: "Nordica Travel",
@@ -777,7 +777,7 @@ export const processSteps: ProcessStep[] = [
     n: "01",
     title: "Discover",
     description:
-      "We dig into your business, audience and competitors to find the fastest path to growth — then agree on a clear scope and budget.",
+      "We dig into your business, audience and competitors to find the fastest path to growth, then agree on a clear scope and budget.",
     icon: Search,
   },
   {
@@ -791,7 +791,7 @@ export const processSteps: ProcessStep[] = [
     n: "03",
     title: "Develop",
     description:
-      "Clean, scalable code shipped in weekly sprints — you see progress every single week, not at the end.",
+      "Clean, scalable code shipped in weekly sprints. You see progress every single week, not at the end.",
     icon: CodeXml,
   },
   {
@@ -805,7 +805,7 @@ export const processSteps: ProcessStep[] = [
     n: "05",
     title: "Grow",
     description:
-      "We measure, iterate and optimize after launch so your results keep compounding — not stalling.",
+      "We measure, iterate and optimize after launch so your results keep compounding, not stalling.",
     icon: TrendingUp,
   },
 ];
@@ -824,7 +824,7 @@ export const whyUs: Feature[] = [
   {
     title: "One team, every skill",
     description:
-      "Strategy, design, engineering and marketing under one roof — no handoffs, no blame games, no lost context.",
+      "Strategy, design, engineering and marketing under one roof: no handoffs, no blame games, no lost context.",
     icon: Layers,
   },
   {
@@ -842,7 +842,7 @@ export const whyUs: Feature[] = [
   {
     title: "Fast by default",
     description:
-      "MVPs in weeks, full launches in months — because speed is a competitive advantage you can feel.",
+      "MVPs in weeks, full launches in months, because speed is a competitive advantage you can feel.",
     icon: Zap,
   },
   {
@@ -854,7 +854,7 @@ export const whyUs: Feature[] = [
   {
     title: "Support that lasts",
     description:
-      "Twelve months of post-launch care included on every project — we don't disappear after delivery.",
+      "Twelve months of post-launch care included on every project. We don't disappear after delivery.",
     icon: ShieldCheck,
   },
 ];
@@ -909,7 +909,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "p",
-        text: "Since 2021, Google has used Core Web Vitals as an official ranking factor. Five years later, they matter more than ever — a slow site doesn't just annoy visitors, it quietly pushes you down the search results while faster competitors take your clicks.",
+        text: "Since 2021, Google has used Core Web Vitals as an official ranking factor. Five years later, they matter more than ever. A slow site doesn't just annoy visitors, it quietly pushes you down the search results while faster competitors take your clicks.",
       },
       { type: "h2", text: "The three metrics that matter" },
       {
@@ -919,28 +919,28 @@ export const blogPosts: BlogPost[] = [
       {
         type: "list",
         items: [
-          "LCP (Largest Contentful Paint) — under 2.5s. How fast the main content of the page appears.",
-          "INP (Interaction to Next Paint) — under 200ms. How responsive the page feels when clicked or tapped.",
-          "CLS (Cumulative Layout Shift) — under 0.1. How much the page jumps as elements load in.",
+          "LCP (Largest Contentful Paint): under 2.5s. How fast the main content of the page appears.",
+          "INP (Interaction to Next Paint): under 200ms. How responsive the page feels when clicked or tapped.",
+          "CLS (Cumulative Layout Shift): under 0.1. How much the page jumps as elements load in.",
         ],
       },
       { type: "h2", text: "Why this matters for your business" },
       {
         type: "p",
-        text: "The data is brutal: 53% of mobile visitors leave a page that takes more than three seconds to load. And the effects compound — a slow page means lower rankings, lower conversions, and higher ad costs on the same traffic.",
+        text: "The data is brutal: 53% of mobile visitors leave a page that takes more than three seconds to load. And the effects compound. A slow page means lower rankings, lower conversions, and higher ad costs on the same traffic.",
       },
       {
         type: "quote",
-        text: "We rebuilt a fashion storefront and cut load time from 7 seconds to 1.2. Conversion rate went up 212% in one quarter. Speed is not a technical nicety — it is a revenue lever.",
+        text: "We rebuilt a fashion storefront and cut load time from 7 seconds to 1.2. Conversion rate went up 212% in one quarter. Speed is not a technical nicety. It is a revenue lever.",
       },
       { type: "h2", text: "How to fix a failing score" },
       {
         type: "list",
         items: [
-          "Switch to server-side rendering or static generation — never ship a site that renders entirely in the browser.",
+          "Switch to server-side rendering or static generation. Never ship a site that renders entirely in the browser.",
           "Compress and resize images, and serve them in modern formats like WebP or AVIF.",
           "Reserve space for images and embeds so the page doesn't jump while loading.",
-          "Minimize third-party scripts — every tag manager, chat widget and tracker adds weight.",
+          "Minimize third-party scripts. Every tag manager, chat widget and tracker adds weight.",
           "Use a CDN and cache aggressively so repeat visits are nearly instant.",
         ],
       },
@@ -950,7 +950,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "At Techsheba, every build ships with a Core Web Vitals budget — we treat a failing score like a failing test. If your site is slow, the fix is usually faster and cheaper than you think.",
+        text: "At Techsheba, every build ships with a Core Web Vitals budget. We treat a failing score like a failing test. If your site is slow, the fix is usually faster and cheaper than you think.",
       },
     ],
   },
@@ -958,7 +958,7 @@ export const blogPosts: BlogPost[] = [
     slug: "website-cost-bangladesh",
     title: "How Much Does a Website Really Cost in Bangladesh? (2026 Pricing Guide)",
     excerpt:
-      "Website prices in Bangladesh range from ৳15,000 to ৳8,00,000+ — and the difference is real. Here's exactly what each price tier buys you, and how to avoid overpaying.",
+      "Website prices in Bangladesh range from ৳15,000 to ৳8,00,000+, and the difference is real. Here's exactly what each price tier buys you, and how to avoid overpaying.",
     category: "Business",
     tags: ["Pricing", "Bangladesh", "Web Development", "Buying Guide"],
     author: { name: "Nusrat Jahan", role: "Content & Strategy Lead" },
@@ -968,34 +968,34 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "p",
-        text: "Ask five agencies in Dhaka how much a website costs and you'll get five different answers — anywhere from ৳15,000 to ৳8,00,000. Both quotes can be perfectly honest. The difference is what you're actually buying.",
+        text: "Ask five agencies in Dhaka how much a website costs and you'll get five different answers, anywhere from ৳15,000 to ৳8,00,000. Both quotes can be perfectly honest. The difference is what you're actually buying.",
       },
       { type: "h2", text: "The three price tiers, explained" },
       {
         type: "list",
         items: [
-          "৳15,000 – ৳50,000 (template sites): A pre-built theme with your logo and content dropped in. Fine as a digital business card, not much more.",
-          "৳50,000 – ৳2,00,000 (custom marketing sites): Custom design, fast load times, SEO-ready structure, CMS so you can edit content yourself.",
-          "৳2,00,000 – ৳8,00,000+ (custom web apps & e-commerce): Multi-vendor stores, dashboards, payments, integrations, and ongoing development.",
+          "৳15,000 - ৳50,000 (template sites): A pre-built theme with your logo and content dropped in. Fine as a digital business card, not much more.",
+          "৳50,000 - ৳2,00,000 (custom marketing sites): Custom design, fast load times, SEO-ready structure, CMS so you can edit content yourself.",
+          "৳2,00,000 - ৳8,00,000+ (custom web apps & e-commerce): Multi-vendor stores, dashboards, payments, integrations, and ongoing development.",
         ],
       },
       { type: "h2", text: "What separates a cheap site from a good one" },
       {
         type: "p",
-        text: "The hidden cost of a cheap website isn't the build — it's what the site doesn't do. A slow, un-optimized site that ranks nowhere and converts nobody is more expensive than any agency quote.",
+        text: "The hidden cost of a cheap website isn't the build. It's what the site doesn't do. A slow, un-optimized site that ranks nowhere and converts nobody is more expensive than any agency quote.",
       },
       {
         type: "list",
         items: [
           "Performance: a 3-second page costs you roughly half your mobile visitors.",
           "SEO foundation: clean structure, metadata and speed are what get you found on Google.",
-          "Ownership: you should own the code, the domain and the content — no hostage situations.",
+          "Ownership: you should own the code, the domain and the content, no hostage situations.",
           "Support: who fixes it when something breaks in six months?",
         ],
       },
       {
         type: "tip",
-        text: "Aim for the custom marketing tier if you sell anything online. The extra ৳50,000 – ৳1,00,000 almost always pays for itself in a few months of extra traffic and conversions.",
+        text: "Aim for the custom marketing tier if you sell anything online. The extra ৳50,000 - ৳1,00,000 almost always pays for itself in a few months of extra traffic and conversions.",
       },
       {
         type: "quote",
@@ -1003,7 +1003,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "At Techsheba we quote fixed, line-item prices after a free discovery call — so you know exactly what you're paying for before a single taka changes hands.",
+        text: "At Techsheba we quote fixed, line-item prices after a free discovery call, so you know exactly what you're paying for before a single taka changes hands.",
       },
     ],
   },
@@ -1011,7 +1011,7 @@ export const blogPosts: BlogPost[] = [
     slug: "ecommerce-conversion-tactics",
     title: "12 Conversion Rate Tactics That Actually Work for E-commerce",
     excerpt:
-      "Most stores leak 95%+ of their traffic. These are the twelve tactics we deploy on real client stores — from one-click checkout to social-proof engineering.",
+      "Most stores leak 95%+ of their traffic. These are the twelve tactics we deploy on real client stores, from one-click checkout to social-proof engineering.",
     category: "Marketing",
     tags: ["CRO", "E-commerce", "Growth", "UX"],
     author: { name: "Farhana Islam", role: "Growth Strategist" },
@@ -1021,30 +1021,30 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "p",
-        text: "The average e-commerce store converts under 2.5% of its visitors. That means 97 out of every 100 people who visit — people you paid to bring there — leave without buying. Conversion optimization is the fastest ROI play in digital marketing.",
+        text: "The average e-commerce store converts under 2.5% of its visitors. That means 97 out of every 100 people who visit, people you paid to bring there, leave without buying. Conversion optimization is the fastest ROI play in digital marketing.",
       },
       { type: "h2", text: "The tactics that move the needle" },
       {
         type: "list",
         items: [
-          "1. One-click checkout — every extra field costs you buyers; save cards and addresses.",
-          "2. Speed above everything — a 1-second delay can cut conversions by 7%.",
+          "1. One-click checkout: every extra field costs you buyers; save cards and addresses.",
+          "2. Speed above everything: a 1-second delay can cut conversions by 7%.",
           "3. Show reviews at the point of decision, not on a separate tab.",
-          "4. Free shipping messaging — free over $X lifts average order value and conversions.",
-          "5. Clear returns policy — it removes the biggest objection to buying online.",
+          "4. Free shipping messaging: free over $X lifts average order value and conversions.",
+          "5. Clear returns policy: it removes the biggest objection to buying online.",
           "6. Trust badges near the payment button, not buried in the footer.",
-          "7. Product videos — a 60-second demo can out-convert three paragraphs of copy.",
-          "8. Scarcity done honestly — real stock levels beat fake countdown timers.",
-          "9. Abandoned-cart emails — 60% of carts are abandoned; recovering 10% is pure profit.",
+          "7. Product videos: a 60-second demo can out-convert three paragraphs of copy.",
+          "8. Scarcity done honestly: real stock levels beat fake countdown timers.",
+          "9. Abandoned-cart emails: 60% of carts are abandoned; recovering 10% is pure profit.",
           "10. Exit-intent offers for first-time buyers.",
-          "11. Search that actually works — a broken search box kills 30% of intent.",
-          "12. A/B test everything — opinions are cheap; data is what pays.",
+          "11. Search that actually works: a broken search box kills 30% of intent.",
+          "12. A/B test everything: opinions are cheap; data is what pays.",
         ],
       },
       { type: "h2", text: "Where to start" },
       {
         type: "p",
-        text: "Don't try all twelve at once. Pick the two where your store is weakest — usually speed and checkout friction — fix them, measure for a month, then move to the next pair.",
+        text: "Don't try all twelve at once. Pick the two where your store is weakest, usually speed and checkout friction, fix them, measure for a month, then move to the next pair.",
       },
       {
         type: "tip",
@@ -1052,7 +1052,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Our e-commerce rebuilds average a 212% conversion lift — not because we're magicians, but because most stores have never systematically applied these basics.",
+        text: "Our e-commerce rebuilds average a 212% conversion lift, not because we're magicians, but because most stores have never systematically applied these basics.",
       },
     ],
   },
@@ -1070,22 +1070,22 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "p",
-        text: "Dhaka's agency scene has grown dramatically — which is great for choice and terrible for decision fatigue. Here's the checklist we wish every client used before interviewing agencies, including us.",
+        text: "Dhaka's agency scene has grown dramatically, which is great for choice and terrible for decision fatigue. Here's the checklist we wish every client used before interviewing agencies, including us.",
       },
       { type: "h2", text: "The 10-point vetting checklist" },
       {
         type: "list",
         items: [
-          "1. Ask for case studies with numbers — not just screenshots. What moved for past clients?",
+          "1. Ask for case studies with numbers, not just screenshots. What moved for past clients?",
           "2. Meet the actual team. Who designs, who codes, who manages?",
           "3. Demand a fixed, line-item quote. Hourly open-ended billing is a red flag.",
-          "4. Check communication rhythm — weekly demos beat monthly email updates.",
-          "5. Verify ownership — you should own code, design files and accounts.",
+          "4. Check communication rhythm: weekly demos beat monthly email updates.",
+          "5. Verify ownership: you should own code, design files and accounts.",
           "6. Ask who supports the project after launch, and for how long.",
-          "7. Look for a process you can follow — discovery, design, build, launch, grow.",
+          "7. Look for a process you can follow: discovery, design, build, launch, grow.",
           "8. Ask how they handle feedback and revisions before you sign.",
           "9. Talk to a past client directly. Agencies that hesitate are hiding something.",
-          "10. Trust your gut on transparency — if the sales call felt evasive, the project will be worse.",
+          "10. Trust your gut on transparency: if the sales call felt evasive, the project will be worse.",
         ],
       },
       {
@@ -1095,7 +1095,7 @@ export const blogPosts: BlogPost[] = [
       { type: "h2", text: "Local vs. international" },
       {
         type: "p",
-        text: "A Dhaka agency offers global-standard output at a fraction of Western rates — but only if they run international-grade processes: async-friendly workflows, recorded standups, and clean documentation.",
+        text: "A Dhaka agency offers global-standard output at a fraction of Western rates, but only if they run international-grade processes: async-friendly workflows, recorded standups, and clean documentation.",
       },
       {
         type: "p",
@@ -1117,29 +1117,29 @@ export const blogPosts: BlogPost[] = [
     content: [
       {
         type: "p",
-        text: "SEO is the tortoise, ads are the hare — and the right answer for your business depends entirely on how fast you need results and how much margin you have.",
+        text: "SEO is the tortoise, ads are the hare, and the right answer for your business depends entirely on how fast you need results and how much margin you have.",
       },
       { type: "h2", text: "When to spend on Google Ads first" },
       {
         type: "list",
         items: [
           "You need sales this month, not in six.",
-          "Your product has high margins — you can afford 20–30% customer acquisition costs.",
+          "Your product has high margins. You can afford 20-30% customer acquisition costs.",
           "You're in a market where buyers search with intent (services, products, urgent needs).",
-          "You can measure conversions properly — ads without tracking are gambling.",
+          "You can measure conversions properly. Ads without tracking are gambling.",
         ],
       },
       { type: "h2", text: "When to invest in SEO first" },
       {
         type: "list",
         items: [
-          "You can wait 3–6 months for compounding results.",
+          "You can wait 3-6 months for compounding results.",
           "You sell anything content-driven: education, SaaS, consulting, local services.",
-          "Your competitors are already ranking — the traffic is proven to exist.",
+          "Your competitors are already ranking. The traffic is proven to exist.",
           "You want sustainable acquisition costs instead of rent paid to Google every month.",
         ],
       },
-      { type: "h2", text: "The winning move? Both — sequenced" },
+      { type: "h2", text: "The winning move? Both, sequenced" },
       {
         type: "p",
         text: "The smartest play for most businesses: start ads to validate demand and fund the business, while building SEO assets in parallel. Six months in, organic traffic takes over the heavy lifting and ad spend drops to top-up levels.",
@@ -1150,7 +1150,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "This is exactly the sequence we ran for Halo Analytics — ads kept the pipeline full while SEO compounded to 3.4× organic traffic in six months.",
+        text: "This is exactly the sequence we ran for Halo Analytics. Ads kept the pipeline full while SEO compounded to 3.4× organic traffic in six months.",
       },
     ],
   },
@@ -1158,7 +1158,7 @@ export const blogPosts: BlogPost[] = [
     slug: "mobile-app-cost-timeline",
     title: "Mobile App Development in 2026: Realistic Costs & Timelines",
     excerpt:
-      "From $8,000 MVPs to $100,000+ platforms — what actually drives app cost, and how to ship an MVP in 8–12 weeks without cutting corners.",
+      "From $8,000 MVPs to $100,000+ platforms: what actually drives app cost, and how to ship an MVP in 8-12 weeks without cutting corners.",
     category: "Mobile",
     tags: ["Mobile Apps", "Pricing", "React Native", "MVP"],
     author: { name: "Tanvir Ahmed", role: "Head of Engineering" },
@@ -1176,18 +1176,18 @@ export const blogPosts: BlogPost[] = [
         items: [
           "Platform: React Native or Flutter (one codebase, both stores) is dramatically cheaper than two native apps.",
           "Backend: a simple API is cheap; realtime features, payments and complex data models are not.",
-          "Design: polished, tested UX costs more than wireframe-level screens — and converts better.",
+          "Design: polished, tested UX costs more than wireframe-level screens, and converts better.",
           "Integrations: every third-party service (payments, maps, SMS, analytics) adds engineering time.",
-          "Ongoing costs: apps need updates with every OS release — budget 15–20% of build cost yearly.",
+          "Ongoing costs: apps need updates with every OS release. Budget 15-20% of build cost yearly.",
         ],
       },
       { type: "h2", text: "Realistic ranges for 2026" },
       {
         type: "list",
         items: [
-          "MVP (1 platform, core feature): $8,000 – $20,000 · 8–12 weeks.",
-          "Full app (both platforms, backend, design system): $20,000 – $60,000 · 3–6 months.",
-          "Complex platform (marketplace, realtime, integrations): $60,000 – $150,000+ · 6–12 months.",
+          "MVP (1 platform, core feature): $8,000 - $20,000 · 8-12 weeks.",
+          "Full app (both platforms, backend, design system): $20,000 - $60,000 · 3-6 months.",
+          "Complex platform (marketplace, realtime, integrations): $60,000 - $150,000+ · 6-12 months.",
         ],
       },
       {
@@ -1196,11 +1196,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "quote",
-        text: "We built Pathly's logistics app from a spreadsheet operation to 50,000 drivers in nine weeks — by cutting the scope to what actually mattered: routes, tracking and reliability.",
+        text: "We built Pathly's logistics app from a spreadsheet operation to 50,000 drivers in nine weeks, by cutting the scope to what actually mattered: routes, tracking and reliability.",
       },
       {
         type: "p",
-        text: "Get a fixed quote by starting with a free discovery call — scope, platform and budget agreed before a line of code.",
+        text: "Get a fixed quote by starting with a free discovery call: scope, platform and budget agreed before a line of code.",
       },
     ],
   },
@@ -1211,15 +1211,15 @@ export const getBlogPost = (slug: string) => blogPosts.find((p) => p.slug === sl
 export const faqs = [
   {
     q: "How much does a website or app cost?",
-    a: "Most website projects land between $1,500 and $15,000 depending on scope; mobile apps typically start around $8,000. After a free discovery call we'll send you a fixed, line-item quote — no surprises, no hidden fees.",
+    a: "Most website projects land between $1,500 and $15,000 depending on scope; mobile apps typically start around $8,000. After a free discovery call we'll send you a fixed, line-item quote, no surprises, no hidden fees.",
   },
   {
     q: "How long does a typical project take?",
-    a: "Marketing sites ship in 2–4 weeks, custom web applications in 6–12 weeks, and mobile apps in 8–16 weeks. You'll see working progress every week through our sprint demos.",
+    a: "Marketing sites ship in 2-4 weeks, custom web applications in 6-12 weeks, and mobile apps in 8-16 weeks. You'll see working progress every week through our sprint demos.",
   },
   {
     q: "Do you work with international clients?",
-    a: "Absolutely — around 60% of our clients are outside Bangladesh. We run async-friendly workflows across time zones, with recorded standups and shared dashboards so you always know where things stand.",
+    a: "Absolutely, around 60% of our clients are outside Bangladesh. We run async-friendly workflows across time zones, with recorded standups and shared dashboards so you always know where things stand.",
   },
   {
     q: "What does your process look like?",
@@ -1227,7 +1227,7 @@ export const faqs = [
   },
   {
     q: "Do you provide support after launch?",
-    a: "Yes. Every project includes 12 months of post-launch support — bug fixes, security updates and a monthly performance review. Optional retainers add growth work like SEO, ads and new features.",
+    a: "Yes. Every project includes 12 months of post-launch support: bug fixes, security updates and a monthly performance review. Optional retainers add growth work like SEO, ads and new features.",
   },
   {
     q: "How do payments work?",

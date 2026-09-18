@@ -22,7 +22,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card outline-none transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/40 hover:shadow-[0_24px_80px_rgba(124,92,255,0.14)] focus-visible:ring-2 focus-visible:ring-brand-500/60"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card outline-none transition duration-300 hover:-translate-y-1 hover:border-brand-500/40 hover:shadow-[0_24px_80px_rgba(124,92,255,0.14)] focus-visible:ring-2 focus-visible:ring-brand-500/60"
     >
       <div className="relative aspect-[16/10] overflow-hidden">
         <Image
@@ -65,7 +65,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
               {post.author.name}
             </span>
           </span>
-          <span className="grid size-8 place-items-center rounded-full border border-border text-muted-foreground transition-all duration-300 group-hover:border-brand-500/50 group-hover:text-brand-accent">
+          <span className="grid size-8 place-items-center rounded-full border border-border text-muted-foreground transition duration-300 group-hover:border-brand-500/50 group-hover:text-brand-accent">
             <ArrowUpRight className="size-4" />
           </span>
         </div>

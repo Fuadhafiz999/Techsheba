@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 import { blogCategories, blogPosts } from "@/data/mockData";
 import { cn } from "@/lib/utils";
@@ -11,6 +11,7 @@ const filters = ["All", ...blogCategories];
 
 export function BlogGrid() {
   const [active, setActive] = useState<string>("All");
+  const reduce = useReducedMotion();
 
   const visible =
     active === "All"
@@ -29,13 +30,15 @@ export function BlogGrid() {
             key={filter}
             type="button"
             role="tab"
+            id={`blog-tab-${filter}`}
+            aria-controls="blog-tabpanel"
             aria-selected={active === filter}
             onClick={() => setActive(filter)}
             className={cn(
-              "rounded-full border px-4 py-2 text-sm font-medium transition-all duration-300",
+              "rounded-full border px-4 py-2 text-sm font-medium transition duration-300",
               active === filter
-                ? "border-brand-500/50 bg-brand-500 text-white shadow-[0_4px_20px_rgba(124,92,255,0.35)]"
-                : "border-border bg-white/5 text-muted-foreground hover:border-brand-500/40 hover:text-foreground"
+                ? "border-brand-500/50 bg-brand-600 text-white shadow-[0_4px_20px_rgba(106,75,240,0.35)]"
+                : "border-border bg-surface-raised text-muted-foreground hover:border-brand-500/40 hover:text-foreground"
             )}
           >
             {filter}
@@ -43,15 +46,21 @@ export function BlogGrid() {
         ))}
       </div>
 
-      <motion.div layout className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <AnimatePresence mode="popLayout">
+      <motion.div
+        layout={!reduce}
+        id="blog-tabpanel"
+        role="tabpanel"
+        aria-label="Filtered articles"
+        className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+      >
+        <AnimatePresence mode={reduce ? "sync" : "popLayout"}>
           {visible.map((post) => (
             <motion.div
               key={post.slug}
-              layout
-              initial={{ opacity: 0, scale: 0.96 }}
+              layout={!reduce}
+              initial={reduce ? false : { opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.96 }}
+              exit={reduce ? undefined : { opacity: 0, scale: 0.96 }}
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
               <BlogCard post={post} />

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { px, whyUs } from "@/data/mockData";
+import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Reveal } from "@/components/shared/Reveal";
 import { GlowCard } from "@/components/shared/GlowCard";
@@ -16,10 +17,10 @@ export function WhyUsSection() {
           title={
             <>
               The agency you can{" "}
-              <span className="text-gradient">actually count on</span>
+              <span className="text-brand-accent">actually count on</span>
             </>
           }
-          description="Anyone can promise a website. We're built to deliver results, communicate honestly, and stay accountable long after launch."
+          description="Anyone can promise a website. We are built to deliver results, communicate honestly, and stay accountable long after launch."
         />
 
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -27,8 +28,8 @@ export function WhyUsSection() {
           <Reveal className="md:col-span-2">
             <GlowCard className="flex h-full flex-col gap-6 sm:flex-row sm:items-center">
               <div className="flex flex-1 flex-col gap-4">
-                <span className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-brand-500/25 to-accent-cyan/20 text-brand-accent ring-1 ring-brand-accent/30">
-                  <featured.icon className="size-6" />
+                <span className="grid size-11 place-items-center rounded-xl bg-brand-500/10 text-brand-accent ring-1 ring-brand-500/15">
+                  <featured.icon className="size-5" />
                 </span>
                 <h3 className="font-display text-xl font-bold">
                   {featured.title}
@@ -51,9 +52,14 @@ export function WhyUsSection() {
 
           {rest.map((feature, i) => (
             <Reveal key={feature.title} delay={0.05 * i}>
-              <GlowCard className="flex h-full flex-col gap-4">
-                <span className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-brand-500/25 to-accent-cyan/20 text-brand-accent ring-1 ring-brand-accent/30">
-                  <feature.icon className="size-6" />
+              <GlowCard
+                className={cn(
+                  "flex h-full flex-col gap-4",
+                  i === 0 && "bg-brand-500/[0.06] border-brand-500/15"
+                )}
+              >
+                <span className="grid size-11 place-items-center rounded-xl bg-brand-500/10 text-brand-accent ring-1 ring-brand-500/15">
+                  <feature.icon className="size-5" />
                 </span>
                 <h3 className="font-display text-lg font-bold">
                   {feature.title}

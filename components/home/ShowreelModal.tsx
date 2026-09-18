@@ -1,5 +1,7 @@
 "use client";
 
+import { useReducedMotion } from "framer-motion";
+
 import {
   Dialog,
   DialogContent,
@@ -15,6 +17,8 @@ type ShowreelModalProps = {
 };
 
 export function ShowreelModal({ open, onOpenChange }: ShowreelModalProps) {
+  const reduce = useReducedMotion();
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
@@ -29,7 +33,8 @@ export function ShowreelModal({ open, onOpenChange }: ShowreelModalProps) {
           src={videos.showreel}
           poster={px(3184292, 1600)}
           controls
-          autoPlay
+          autoPlay={!reduce}
+          muted
           playsInline
           className="aspect-video w-full rounded-xl object-cover"
         />

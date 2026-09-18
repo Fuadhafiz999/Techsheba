@@ -13,14 +13,14 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Techsheba on WhatsApp"
-      className="group fixed right-4 bottom-20 z-40 md:right-6 md:bottom-6"
+      className="group fixed right-6 bottom-6 z-40 hidden md:block"
     >
       <span className="relative grid size-13 place-items-center">
         <span
           aria-hidden="true"
-          className="absolute inset-0 animate-pulse-ring rounded-full bg-[#25D366]"
+          className="absolute inset-0 animate-pulse-ring rounded-full bg-whatsapp"
         />
-        <span className="relative grid size-13 place-items-center rounded-full bg-[#25D366] shadow-[0_8px_30px_rgba(37,211,102,0.45)] transition-transform duration-300 group-hover:scale-110">
+        <span className="relative grid size-13 place-items-center rounded-full bg-whatsapp shadow-[0_8px_30px] shadow-whatsapp/45 transition-transform duration-300 group-hover:scale-110">
           <MessageCircle className="size-6 text-white" fill="white" />
         </span>
       </span>

@@ -9,7 +9,7 @@ import { CTASection } from "@/components/home/CTASection";
 export const metadata: Metadata = {
   title: "Blog & Resources",
   description:
-    "Practical guides on web performance, e-commerce conversion, digital marketing and pricing — from the Techsheba team in Dhaka.",
+    "Practical guides on web performance, e-commerce conversion, digital marketing and pricing, from the Techsheba team in Dhaka.",
 };
 
 export default function BlogPage() {
@@ -30,14 +30,14 @@ export default function BlogPage() {
           <Reveal delay={0.05}>
             <h1 className="max-w-3xl font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
               Ideas that help you{" "}
-              <span className="text-gradient">grow faster</span>
+              <span className="text-brand-accent">grow faster</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               Everything we learn shipping websites, apps and campaigns for
-              clients in 12 countries — distilled into practical guides you
-              can act on this week.
+clients in 12 countries, distilled into practical guides you
+               can act on this week.
             </p>
           </Reveal>
         </div>
@@ -64,7 +64,7 @@ export default function BlogPage() {
                   <Mail className="size-6" />
                 </span>
                 <h2 className="font-display text-2xl font-bold text-balance sm:text-3xl">
-                  One useful email a month — no spam, ever
+                  One useful email a month, no spam, ever
                 </h2>
                 <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
                   Join 2,000+ founders and marketers getting our best growth

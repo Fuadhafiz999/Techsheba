@@ -18,11 +18,10 @@ export function FAQSection() {
         <div className="flex flex-col gap-6">
           <SectionHeading
             align="left"
-            eyebrow="FAQ"
             title={
               <>
                 Questions,{" "}
-                <span className="text-gradient">answered honestly</span>
+                <span className="text-brand-accent">answered honestly</span>
               </>
             }
             description="Everything clients usually ask before starting. If yours isn't here, we answer within 24 hours."
@@ -30,7 +29,7 @@ export function FAQSection() {
           <Reveal delay={0.1}>
             <div className="flex flex-col gap-4">
               <CTAButton href="/contact" size="md">
-                Ask us anything
+                Start a project
               </CTAButton>
               <a
                 href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
@@ -40,8 +39,8 @@ export function FAQSection() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
-                <MessageCircle className="size-4 text-[#25D366]" />
-                Or chat on WhatsApp
+                <MessageCircle className="size-4 text-whatsapp" />
+                Chat on WhatsApp
               </a>
             </div>
           </Reveal>

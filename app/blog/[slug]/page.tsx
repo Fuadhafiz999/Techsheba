@@ -169,7 +169,7 @@ export default async function BlogArticlePage({ params }: Props) {
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-border bg-white/5 px-3 py-1 text-xs text-muted-foreground"
+                  className="rounded-full border border-border bg-surface-raised px-3 py-1 text-xs text-muted-foreground"
                 >
                   {tag}
                 </span>

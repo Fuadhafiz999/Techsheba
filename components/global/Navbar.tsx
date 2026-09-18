@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Menu, Phone, X } from "lucide-react";
 import { useLenis } from "lenis/react";
 
@@ -18,12 +18,29 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const lenis = useLenis();
+  const reduce = useReducedMotion();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    // Observe a 12px sentinel at the very top of the page to toggle the
+    // scrolled state without a per-frame scroll listener.
+    const sentinel = document.createElement("div");
+    sentinel.setAttribute("aria-hidden", "true");
+    sentinel.style.position = "absolute";
+    sentinel.style.top = "0";
+    sentinel.style.height = "12px";
+    sentinel.style.pointerEvents = "none";
+    document.body.prepend(sentinel);
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setScrolled(!entry.isIntersecting),
+      { threshold: 0 }
+    );
+    observer.observe(sentinel);
+
+    return () => {
+      observer.disconnect();
+      sentinel.remove();
+    };
   }, []);
 
   useEffect(() => {
@@ -35,7 +52,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        "fixed inset-x-0 top-0 z-50 transition duration-300",
         scrolled || open
           ? "border-b border-border/70 bg-background/80 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
@@ -81,7 +98,7 @@ export function Navbar() {
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            className="grid size-10 place-items-center rounded-xl border border-border bg-white/5 text-foreground"
+            className="grid size-10 place-items-center rounded-xl border border-border bg-surface-raised text-foreground"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -92,9 +109,9 @@ export function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={reduce ? false : { opacity: 0, height: 0 }}
+            animate={reduce ? undefined : { opacity: 1, height: "auto" }}
+            exit={reduce ? undefined : { opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden border-t border-border/60 lg:hidden"
           >
@@ -105,7 +122,7 @@ export function Navbar() {
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.href}
-                  initial={{ opacity: 0, x: -12 }}
+                  initial={reduce ? false : { opacity: 0, x: -12 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.06 * i, duration: 0.3 }}
                 >
@@ -115,8 +132,8 @@ export function Navbar() {
                     className={cn(
                       "flex items-center justify-between rounded-xl px-4 py-3.5 font-display text-xl font-semibold",
                       pathname.startsWith(link.href)
-                        ? "bg-white/5 text-foreground"
-                        : "text-muted-foreground hover:bg-white/5 hover:text-foreground"
+                        ? "bg-surface-raised text-foreground"
+                        : "text-muted-foreground hover:bg-surface-raised hover:text-foreground"
                     )}
                   >
                     {link.label}
@@ -126,7 +143,7 @@ export function Navbar() {
               ))}
 
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
+                initial={reduce ? false : { opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.3 }}
                 className="mt-4 flex flex-col gap-3"
@@ -141,7 +158,7 @@ export function Navbar() {
                 </CTAButton>
                 <a
                   href={`tel:${siteConfig.phoneHref}`}
-                  className="flex h-11 items-center justify-center gap-2 rounded-full border border-border bg-white/5 text-sm font-semibold text-foreground"
+                  className="flex h-11 items-center justify-center gap-2 rounded-full border border-border bg-surface-raised text-sm font-semibold text-foreground"
                 >
                   <Phone className="size-4" />
                   {siteConfig.phone}

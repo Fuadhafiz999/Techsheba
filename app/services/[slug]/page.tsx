@@ -84,7 +84,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             <Reveal delay={0.15}>
               <div className="flex flex-col gap-3 pt-1 sm:flex-row">
                 <CTAButton href="/contact" size="lg">
-                  Get a free quote
+                  Start a project
                   <ArrowRight className="size-4" />
                 </CTAButton>
                 <CTAButton
@@ -94,8 +94,8 @@ export default async function ServiceDetailPage({ params }: Props) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <MessageCircle className="size-4 text-[#25D366]" />
-                  Ask on WhatsApp
+                  <MessageCircle className="size-4 text-whatsapp" />
+                  Chat on WhatsApp
                 </CTAButton>
               </div>
             </Reveal>
@@ -105,7 +105,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             <div className="relative overflow-hidden rounded-3xl border border-border shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
               <Image
                 src={service.image}
-                alt={`${service.title} — Techsheba`}
+                alt={`${service.title} by Techsheba`}
                 width={1200}
                 height={900}
                 priority
@@ -150,7 +150,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               </ul>
               <div className="mt-auto">
                 <CTAButton href="/contact" size="md">
-                  Get a detailed scope
+                  Start a project
                   <ArrowRight className="size-4" />
                 </CTAButton>
               </div>
@@ -168,7 +168,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                     key={o.label}
                     className="flex items-baseline gap-3 border-b border-border/60 pb-4 last:border-0 last:pb-0"
                   >
-                    <span className="font-display text-3xl font-bold text-gradient">
+                    <span className="font-display text-3xl font-bold text-brand-accent">
                       {o.value}
                     </span>
                     <span className="text-sm text-muted-foreground">

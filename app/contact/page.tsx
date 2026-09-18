@@ -16,7 +16,7 @@ import { ContactForm } from "@/components/contact/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get a free, fixed proposal within 24 hours. Talk to Techsheba on WhatsApp, email or a Calendly call — no pressure, no jargon.",
+    "Get a free, fixed proposal within 24 hours. Talk to Techsheba on WhatsApp, email or a Calendly call, no pressure, no jargon.",
 };
 
 const channels = [
@@ -52,7 +52,7 @@ const nextSteps = [
   {
     n: "1",
     title: "We reply within 24h",
-    description: "A real human reads your brief — not a bot, not a sales script.",
+    description: "A real human reads your brief, not a bot, not a sales script.",
   },
   {
     n: "2",
@@ -88,14 +88,14 @@ export default function ContactPage() {
           <Reveal delay={0.05}>
             <h1 className="max-w-3xl font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
               Let&apos;s build something{" "}
-              <span className="text-gradient">great together</span>
+              <span className="text-brand-accent">great together</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               Tell us about your project and get a free, fixed proposal within
-              24 hours — whether you&apos;re around the corner in Dhaka or on
-              the other side of the world.
+24 hours, whether you&apos;re around the corner in Dhaka or on
+               the other side of the world.
             </p>
           </Reveal>
         </div>
@@ -111,7 +111,7 @@ export default function ContactPage() {
                   href={c.href}
                   target={c.href.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
-                  className="group flex h-full flex-col gap-3 rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/40"
+                  className="group flex h-full flex-col gap-3 rounded-2xl border border-border bg-card p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-500/40"
                 >
                   <span className="grid size-10 place-items-center rounded-xl bg-gradient-to-br from-brand-500/25 to-accent-cyan/20 text-brand-accent ring-1 ring-brand-accent/30">
                     <c.icon className="size-5" />
@@ -177,14 +177,14 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="flex flex-col gap-4 rounded-2xl border border-[#25D366]/25 bg-[#25D366]/5 p-6 sm:p-8">
+              <div className="flex flex-col gap-4 rounded-2xl border border-whatsapp/25 bg-whatsapp/5 p-6 sm:p-8">
                 <h2 className="font-display text-lg font-bold">
                   In a hurry? Message us on WhatsApp
                 </h2>
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   We typically respond within a couple of hours during
-                  business time — and yes, we work with international clients
-                  across time zones.
+business time, and yes, we work with international clients
+                   across time zones.
                 </p>
                 <CTAButton
                   href={whatsappHref}
@@ -192,7 +192,7 @@ export default function ContactPage() {
                   variant="outline"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-[#25D366]/40 text-[#25D366] hover:border-[#25D366] hover:bg-[#25D366]/10"
+                  className="border-whatsapp/50 text-whatsapp-fg hover:border-whatsapp hover:bg-whatsapp/10"
                 >
                   <MessageCircle className="size-4" />
                   Chat on WhatsApp
@@ -213,11 +213,11 @@ export default function ContactPage() {
               </span>
               <h2 className="font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">
                 Prefer to talk it through?{" "}
-                <span className="text-gradient">Book a free strategy call</span>
+                <span className="text-brand-accent">Book a free strategy call</span>
               </h2>
               <p className="max-w-md text-base leading-relaxed text-muted-foreground">
                 30 minutes, zero pressure. We&apos;ll map your goals, answer
-                your questions, and leave you with a clear next step — whether
+                your questions, and leave you with a clear next step, whether
                 or not we work together.
               </p>
               <ul className="flex flex-col gap-2 text-sm text-muted-foreground">

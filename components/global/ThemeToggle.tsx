@@ -1,7 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Moon, Sun } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -19,6 +19,7 @@ const useMounted = () =>
 export function ThemeToggle({ className }: { className?: string }) {
   const { theme, toggleTheme } = useTheme();
   const mounted = useMounted();
+  const reduce = useReducedMotion();
 
   // Attributes must be identical between server and client during hydration.
   // The theme only resolves on the client (system preference), so use a
@@ -36,11 +37,19 @@ export function ThemeToggle({ className }: { className?: string }) {
       aria-label={label}
       title={label}
       className={cn(
-        "grid size-10 place-items-center rounded-xl border border-border bg-white/5 text-muted-foreground transition-colors hover:border-brand-accent/40 hover:text-foreground",
+        "grid size-10 place-items-center rounded-xl border border-border bg-surface-raised text-muted-foreground transition-colors hover:border-brand-accent/40 hover:text-foreground",
         className
       )}
     >
-      {mounted ? (
+      {reduce ? (
+        <span className="grid place-items-center">
+          {theme === "dark" ? (
+            <Sun className="size-5" />
+          ) : (
+            <Moon className="size-5" />
+          )}
+        </span>
+      ) : mounted ? (
         <AnimatePresence mode="wait" initial={false}>
           <motion.span
             key={theme}

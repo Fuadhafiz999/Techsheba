@@ -7,7 +7,7 @@ type CTAButtonProps = {
   children: React.ReactNode;
   className?: string;
   size?: "sm" | "md" | "lg";
-  variant?: "default" | "outline" | "ghost" | "white";
+  variant?: "default" | "outline" | "ghost";
   type?: "button" | "submit";
   onClick?: () => void;
   target?: string;
@@ -22,11 +22,10 @@ const sizeStyles = {
 
 const variantStyles = {
   default:
-    "bg-brand-500 text-white hover:bg-brand-600 shadow-[0_8px_32px_rgba(124,92,255,0.35)] hover:shadow-[0_12px_48px_rgba(124,92,255,0.5)]",
+    "bg-brand-600 text-white hover:bg-brand-700 shadow-[0_8px_32px_rgba(106,75,240,0.35)] hover:shadow-[0_12px_48px_rgba(106,75,240,0.5)]",
   outline:
-    "border border-border bg-white/5 text-foreground hover:border-brand-500/50 hover:bg-white/10",
+    "border border-border bg-surface-raised text-foreground hover:border-brand-500/50 hover:bg-surface-raised-hover",
   ghost: "bg-transparent text-muted-foreground hover:text-foreground",
-  white: "bg-white text-slate-900 hover:bg-brand-100",
 };
 
 export function CTAButton({
@@ -41,7 +40,7 @@ export function CTAButton({
   rel,
 }: CTAButtonProps) {
   const classes = cn(
-    "group inline-flex shrink-0 items-center justify-center gap-2 rounded-full font-semibold transition-all duration-300 outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+    "group inline-flex shrink-0 items-center justify-center gap-2 rounded-full font-semibold transition duration-300 outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
     sizeStyles[size],
     variantStyles[variant],
     className

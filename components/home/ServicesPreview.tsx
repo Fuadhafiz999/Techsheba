@@ -3,81 +3,67 @@ import { ArrowRight } from "lucide-react";
 
 import { services } from "@/data/mockData";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { GlowCard } from "@/components/shared/GlowCard";
 import { Reveal } from "@/components/shared/Reveal";
 import { CTAButton } from "@/components/shared/CTAButton";
-import { Badge } from "@/components/ui/badge";
 
-const categoryLabel: Record<string, string> = {
-  tech: "Tech",
-  creative: "Creative",
-  "digital-marketing": "Marketing",
-};
+const featuredSlugs = [
+  "digital-marketing",
+  "social-media-marketing",
+  "branding",
+  "lead-generation",
+  "website-design-development",
+  "motion-graphics-video",
+];
 
 export function ServicesPreview() {
+  const featured = featuredSlugs
+    .map((slug) => services.find((s) => s.slug === slug))
+    .filter((s): s is (typeof services)[number] => Boolean(s));
+
   return (
     <section className="py-20 md:py-28 lg:py-32">
       <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="What we do"
           title={
             <>
               Full-stack services,{" "}
-              <span className="text-gradient">one accountable team</span>
+              <span className="text-brand-accent">one accountable team</span>
             </>
           }
-          description="Strategy, design, engineering and marketing under one roof — so nothing gets lost between agencies, freelancers or handoffs."
+          description="Strategy, design, engineering and marketing under one roof, so nothing gets lost between agencies, freelancers or handoffs."
         />
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            "digital-marketing",
-            "social-media-marketing",
-            "branding",
-            "lead-generation",
-            "website-design-development",
-            "motion-graphics-video",
-          ]
-            .map((slug) => services.find((s) => s.slug === slug))
-            .filter((s): s is (typeof services)[number] => Boolean(s))
-            .map((service, i) => {
+        <div className="mt-14 grid gap-x-12 gap-y-10 md:grid-cols-2">
+          {featured.map((service, i) => {
             const Icon = service.icon;
             return (
-              <Reveal key={service.slug} delay={0.05 * i}>
-                <GlowCard className="flex h-full flex-col gap-5">
-                  <div className="flex items-start justify-between">
-                    <span className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-brand-500/25 to-accent-cyan/20 text-brand-accent ring-1 ring-brand-accent/30">
-                      <Icon className="size-6" />
-                    </span>
-                    <Badge
-                      variant="outline"
-                      className="rounded-full border-border text-[0.65rem] font-semibold tracking-wider text-muted-foreground uppercase"
-                    >
-                      {categoryLabel[service.category]}
-                    </Badge>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <h3 className="font-display text-xl font-bold">
+              <Reveal key={service.slug} delay={0.04 * i}>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="group flex items-start gap-5 outline-none rounded-xl focus-visible:ring-2 focus-visible:ring-brand-500/60"
+                >
+                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-brand-500/10 text-brand-accent ring-1 ring-brand-500/15 transition-colors duration-300 group-hover:bg-brand-500/20">
+                    <Icon className="size-5" />
+                  </span>
+                  <span className="flex flex-col gap-1.5">
+                    <span className="font-display text-lg font-semibold tracking-tight transition-colors group-hover:text-brand-accent">
                       {service.title}
-                    </h3>
-                    <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                    </span>
+                    <span className="text-sm leading-relaxed text-muted-foreground">
                       {service.description}
-                    </p>
-                  </div>
-                  <Link
-                    href={`/services/${service.slug}`}
-                    className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-brand-accent transition-colors hover:text-brand-accent"
-                  >
-                    Explore service
-                    <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-                  </Link>
-                </GlowCard>
+                    </span>
+                    <span className="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-brand-accent opacity-0 transition duration-300 group-hover:opacity-100">
+                      Explore this service
+                      <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+                    </span>
+                  </span>
+                </Link>
               </Reveal>
             );
           })}
         </div>
 
-        <Reveal className="mt-12 flex justify-center" delay={0.1}>
+        <Reveal className="mt-14 flex justify-center" delay={0.1}>
           <CTAButton href="/services" variant="outline" size="lg">
             See all services
             <ArrowRight className="size-4" />

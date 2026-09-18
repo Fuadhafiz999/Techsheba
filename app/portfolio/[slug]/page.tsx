@@ -59,7 +59,7 @@ export default async function CaseStudyPage({ params }: Props) {
                   >
                     {study.category}
                   </Badge>
-                  <span className="rounded-full border border-border bg-white/5 px-3 py-1 text-[0.65rem] font-medium text-muted-foreground">
+                  <span className="rounded-full border border-border bg-surface-raised px-3 py-1 text-[0.65rem] font-medium text-muted-foreground">
                     {study.year}
                   </span>
                 </div>
@@ -146,7 +146,7 @@ export default async function CaseStudyPage({ params }: Props) {
                 {study.tags.map((tag) => (
                   <li
                     key={tag}
-                    className="rounded-full border border-border bg-white/5 px-3 py-1 text-xs text-muted-foreground"
+                    className="rounded-full border border-border bg-surface-raised px-3 py-1 text-xs text-muted-foreground"
                   >
                     {tag}
                   </li>
@@ -162,7 +162,7 @@ export default async function CaseStudyPage({ params }: Props) {
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
           <Reveal>
             <h2 className="font-display text-2xl font-bold sm:text-3xl">
-              The <span className="text-gradient">results</span>
+              The <span className="text-brand-accent">results</span>
             </h2>
           </Reveal>
           <div className="mt-10 grid gap-8 sm:grid-cols-3">
@@ -174,7 +174,7 @@ export default async function CaseStudyPage({ params }: Props) {
                     prefix={r.prefix ?? ""}
                     suffix={r.suffix ?? ""}
                     decimals={Number.isInteger(r.value) ? 0 : 1}
-                    className="font-display text-4xl font-bold tracking-tight text-gradient sm:text-5xl"
+                    className="font-display text-4xl font-bold tracking-tight text-brand-accent sm:text-5xl"
                   />
                   <p className="text-sm text-muted-foreground">{r.label}</p>
                 </div>
@@ -198,7 +198,7 @@ export default async function CaseStudyPage({ params }: Props) {
                 <div className="relative overflow-hidden rounded-2xl border border-border">
                   <Image
                     src={img}
-                    alt={`${study.title} — project gallery ${i + 1}`}
+                    alt={`${study.title}, project gallery ${i + 1}`}
                     width={900}
                     height={675}
                     className="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105"
@@ -215,7 +215,7 @@ export default async function CaseStudyPage({ params }: Props) {
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
           <Link
             href={`/portfolio/${next.slug}`}
-            className="group relative flex flex-col gap-6 overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:border-brand-500/40 sm:p-12"
+            className="group relative flex flex-col gap-6 overflow-hidden rounded-3xl border border-border bg-card p-8 transition duration-300 hover:border-brand-500/40 sm:p-12"
           >
             <div className="relative h-40 overflow-hidden rounded-2xl sm:h-56">
               <Image

@@ -10,7 +10,7 @@ export default function NotFound() {
         <div className="absolute top-1/4 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-brand-accent/20 blur-[120px]" />
       </div>
       <div className="flex flex-col items-center gap-6 text-center">
-        <p className="font-display text-7xl font-bold tracking-tight text-gradient sm:text-8xl">
+        <p className="font-display text-7xl font-bold tracking-tight text-brand-accent sm:text-8xl">
           404
         </p>
         <h1 className="font-display text-2xl font-bold sm:text-3xl">

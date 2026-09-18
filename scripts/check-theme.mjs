@@ -61,15 +61,15 @@ for (const path of ["/", "/services", "/portfolio", "/contact", "/blog"]) {
   report(`light ${path || "/"}: no horizontal overflow`, !overflow);
 }
 
-// 6. Gradient text contrast in light mode (should be dark violet → cyan stops)
+// 6. Brand accent contrast in light mode (should resolve to dark violet ports)
 await page.goto(BASE + "/", { waitUntil: "networkidle0" });
 await sleep(500);
-const grad = await page.evaluate(() => {
-  const el = document.querySelector(".text-gradient");
+const accent = await page.evaluate(() => {
+  const el = document.querySelector(".text-brand-accent");
   if (!el) return null;
-  return getComputedStyle(el).backgroundImage;
+  return getComputedStyle(el).color;
 });
-report("light theme: gradient text uses dark stops", /5b3fe0|0e7490/i.test(grad || ""), (grad || "").slice(0, 80));
+report("light theme: brand accent uses dark port", /91,\s*63,\s*224|5b3fe0/i.test(accent || ""), (accent || "").slice(0, 80));
 
 // 7. Toggle button exists in navbar
 const toggleCount = await page.evaluate(

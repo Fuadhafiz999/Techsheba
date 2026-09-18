@@ -28,21 +28,18 @@ export function CTASection() {
             </div>
 
             <div className="relative z-10 mx-auto flex max-w-2xl flex-col items-center gap-6">
-              <span className="rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold tracking-widest text-brand-accent uppercase backdrop-blur-sm">
-                Limited onboarding slots each month
-              </span>
               <h2 className="font-display text-3xl font-bold tracking-tight text-balance sm:text-5xl sm:leading-[1.12]">
                 Have a project in mind?{" "}
-                <span className="text-gradient">Let&apos;s build it.</span>
+                <span className="text-brand-accent">Let&apos;s build it.</span>
               </h2>
               <p className="max-w-lg text-base leading-relaxed text-muted-foreground sm:text-lg">
                 Tell us what you&apos;re building and we&apos;ll send a free,
-                fixed proposal within 24 hours — no pressure, no jargon, no
+                fixed proposal within 24 hours, no pressure, no jargon, no
                 hidden fees.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <CTAButton href="/contact" size="lg">
-                  Start your project
+                  Start a project
                   <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                 </CTAButton>
                 <CTAButton
@@ -52,7 +49,7 @@ export function CTASection() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <MessageCircle className="size-4 text-[#25D366]" />
+                  <MessageCircle className="size-4 text-whatsapp" />
                   Chat on WhatsApp
                 </CTAButton>
               </div>

@@ -11,7 +11,7 @@ import { CTASection } from "@/components/home/CTASection";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Web development, mobile apps, UI/UX design, branding, digital marketing and motion graphics — full-stack services from one accountable team.",
+    "Web development, mobile apps, UI/UX design, branding, digital marketing and motion graphics: full-stack services from one accountable team.",
 };
 
 export default function ServicesPage() {
@@ -32,20 +32,20 @@ export default function ServicesPage() {
           <Reveal delay={0.05}>
             <h1 className="max-w-3xl font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
               Everything your brand needs to{" "}
-              <span className="text-gradient">grow online</span>
+              <span className="text-brand-accent">grow online</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               Six core capabilities, one accountable team. Pick a single
-              service or let us run the whole growth engine — strategy,
+              service or let us run the whole growth engine: strategy,
               design, code and marketing working as one.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
             <div className="flex flex-col gap-3 pt-2 sm:flex-row">
               <CTAButton href="/contact" size="lg">
-                Get a free proposal
+                Start a project
                 <ArrowRight className="size-4" />
               </CTAButton>
               <CTAButton href="/portfolio" variant="outline" size="lg">
@@ -76,7 +76,7 @@ export default function ServicesPage() {
                       .map((s) => (
                         <li
                           key={s.slug}
-                          className="rounded-full border border-border bg-white/5 px-3 py-1 text-xs text-muted-foreground"
+                          className="rounded-full border border-border bg-surface-raised px-3 py-1 text-xs text-muted-foreground"
                         >
                           {s.title}
                         </li>
@@ -94,7 +94,7 @@ export default function ServicesPage() {
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
           <SectionHeading
             eyebrow="What's included"
-            title="Pick a service — or bundle them all"
+            title="Pick a service or bundle them all"
             description="Every engagement starts with a free discovery call and a fixed, line-item quote. No hidden fees, ever."
           />
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

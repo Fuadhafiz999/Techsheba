@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 
 import { caseStudies } from "@/data/mockData";
+import { cn } from "@/lib/utils";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Reveal } from "@/components/shared/Reveal";
 import { CTAButton } from "@/components/shared/CTAButton";
@@ -19,7 +20,7 @@ export function PortfolioShowcase() {
             title={
               <>
                 Results our clients{" "}
-                <span className="text-gradient">brag about</span>
+                <span className="text-brand-accent">brag about</span>
               </>
             }
             description="Real projects, real numbers. Hover a card to see the work in motion."
@@ -32,9 +33,18 @@ export function PortfolioShowcase() {
           </Reveal>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:gap-6">
+        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-12 lg:gap-6">
           {featured.map((study, i) => (
-            <Reveal key={study.slug} delay={0.06 * i}>
+            <Reveal
+              key={study.slug}
+              delay={0.06 * i}
+              className={cn(
+                i === 0 && "lg:col-span-7",
+                i === 1 && "lg:col-span-5",
+                i === 2 && "lg:col-span-5",
+                i === 3 && "lg:col-span-7"
+              )}
+            >
               <PortfolioCard study={study} priority={i < 2} />
             </Reveal>
           ))}

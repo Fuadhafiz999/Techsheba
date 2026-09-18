@@ -9,7 +9,7 @@ import { CTASection } from "@/components/home/CTASection";
 export const metadata: Metadata = {
   title: "Work & Case Studies",
   description:
-    "Case studies across fintech, e-commerce, logistics, SaaS and travel — with the numbers to prove it.",
+    "Case studies across fintech, e-commerce, logistics, SaaS and travel, with the numbers to prove it.",
 };
 
 export default function PortfolioPage() {
@@ -30,18 +30,18 @@ export default function PortfolioPage() {
           <Reveal delay={0.05}>
             <h1 className="max-w-3xl font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
               Work that speaks in{" "}
-              <span className="text-gradient">numbers</span>
+              <span className="text-brand-accent">numbers</span>
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Every project below shipped on time, on budget — and moved a
+              Every project below shipped on time, on budget, and moved a
               real business metric. Hover any card to see the work in motion.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
             <CTAButton href="/contact" size="lg">
-              Start a project like these
+              Start a project
               <ArrowRight className="size-4" />
             </CTAButton>
           </Reveal>
