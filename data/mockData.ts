@@ -70,8 +70,6 @@ export const siteConfig = {
   address: "Level 4, House 12, Road 5, Banani, Dhaka 1213, Bangladesh",
   hours: "Sat - Thu · 10:00 - 19:00 (GMT+6)",
   founded: 2017,
-  /** Replace with your real Calendly link. */
-  calendlyUrl: "https://calendly.com/techsheba/discovery-call",
   socials: {
     facebook: "https://facebook.com/techsheba",
     instagram: "https://instagram.com/techsheba",

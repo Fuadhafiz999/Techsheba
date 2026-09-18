@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import {
-  CalendarClock,
-  Clock,
-  Mail,
-  MapPin,
-  MessageCircle,
-  Phone,
-} from "lucide-react";
+import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 import { siteConfig } from "@/data/mockData";
 import { Reveal } from "@/components/shared/Reveal";
@@ -16,7 +9,7 @@ import { ContactForm } from "@/components/contact/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get a free, fixed proposal within 24 hours. Talk to Techsheba on WhatsApp, email or a Calendly call, no pressure, no jargon.",
+    "Get a free, fixed proposal within 24 hours. Talk to Techsheba on WhatsApp or email, no pressure, no jargon.",
 };
 
 const channels = [
@@ -200,49 +193,6 @@ business time, and yes, we work with international clients
               </div>
             </Reveal>
           </div>
-        </div>
-      </section>
-
-      {/* Calendly */}
-      <section className="border-t border-border bg-card/40 py-16 lg:py-24">
-        <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal>
-            <div className="flex flex-col items-start gap-5">
-              <span className="rounded-full border border-brand-accent/30 bg-brand-accent/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-brand-accent uppercase">
-                Book a call
-              </span>
-              <h2 className="font-display text-3xl font-bold tracking-tight text-balance sm:text-4xl">
-                Prefer to talk it through?{" "}
-                <span className="text-brand-accent">Book a free strategy call</span>
-              </h2>
-              <p className="max-w-md text-base leading-relaxed text-muted-foreground">
-                30 minutes, zero pressure. We&apos;ll map your goals, answer
-                your questions, and leave you with a clear next step, whether
-                or not we work together.
-              </p>
-              <ul className="flex flex-col gap-2 text-sm text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <CalendarClock className="size-4 text-brand-accent" />
-                  Pick a slot that suits your time zone
-                </li>
-                <li className="flex items-center gap-2">
-                  <Clock className="size-4 text-brand-accent" />
-                  Get a recap + fixed quote within 24h
-                </li>
-              </ul>
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.08}>
-            <div className="overflow-hidden rounded-3xl border border-border bg-card">
-              <iframe
-                src={siteConfig.calendlyUrl}
-                title="Book a discovery call with Techsheba"
-                className="h-[560px] w-full"
-                loading="lazy"
-              />
-            </div>
-          </Reveal>
         </div>
       </section>
     </>

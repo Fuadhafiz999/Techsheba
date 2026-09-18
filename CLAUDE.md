@@ -41,7 +41,7 @@ Enforce a clean, separate-file folder hierarchy:
 │   ├── services/                 # Services pages (Digital Marketing, Creative, Tech)
 │   ├── portfolio/                # Portfolio & Case Studies index & dynamic detail pages
 │   ├── about/                    # About & Why Us page
-│   └── contact/                  # Contact page (WhatsApp integration, Calendly embed)
+│   └── contact/                  # Contact page (WhatsApp integration, contact form)
 ├── components/
 │   ├── global/                   # Navbar, Footer, Sticky Mobile Action Bar, WhatsApp Button
 │   ├── home/                     # Hero section, Feature grids, Showreel modal
