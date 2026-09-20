@@ -2,15 +2,17 @@ import type { Metadata } from "next";
 import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 import { siteConfig } from "@/data/mockData";
+import { constructMetadata } from "@/lib/seo";
 import { Reveal } from "@/components/shared/Reveal";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { ContactForm } from "@/components/contact/ContactForm";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "Contact Us",
   description:
     "Get a free, fixed proposal within 24 hours. Talk to Techsheba on WhatsApp or email, no pressure, no jargon.",
-};
+  path: "/contact",
+});
 
 const channels = [
   {

@@ -60,7 +60,7 @@ export const siteConfig = {
   domain: "techsheba.com",
   tagline: "Full-service digital agency",
   description:
-    "Techsheba is a full-service digital agency from Dhaka, Bangladesh, building high-performance websites, mobile apps, brands and marketing campaigns for ambitious companies worldwide.",
+    "Techsheba is a full-service digital agency in Dhaka, Bangladesh building websites, apps, brands and marketing campaigns for global clients.",
   email: "hello@techsheba.com",
   phone: "+880 1712-345678",
   phoneHref: "+8801712345678",
@@ -758,6 +758,183 @@ export const testimonials: Testimonial[] = [
     rating: 5,
   },
 ];
+
+/* ------------------------------------------------------------------ */
+/* Team                                                                */
+/* ------------------------------------------------------------------ */
+
+export type DepartmentSlug =
+  | "management"
+  | "web"
+  | "design"
+  | "marketing"
+  | "video"
+  | "it-support";
+
+export interface Department {
+  slug: DepartmentSlug;
+  title: string;
+}
+
+export const departments: Department[] = [
+  { slug: "management", title: "Management" },
+  { slug: "web", title: "Web Design & Development" },
+  { slug: "design", title: "Graphic Design" },
+  { slug: "marketing", title: "Digital Marketing" },
+  { slug: "video", title: "Video & Motion" },
+  { slug: "it-support", title: "IT Support" },
+];
+
+export interface TeamMember {
+  name: string;
+  role: string;
+  departments: DepartmentSlug[];
+  image: string;
+  bio: string;
+  /** Members marked hidden are in the roster but not shown on the public site. */
+  hidden?: boolean;
+}
+
+export const teamMembers: TeamMember[] = [
+  {
+    name: "Arif Chowdhury",
+    role: "Founder & CEO",
+    departments: ["management"],
+    image: px(2204531, 600),
+    bio: "Leads the vision, the culture and the big bets. Started Techsheba in 2017 with one laptop and three believers.",
+  },
+  {
+    name: "Tanvir Ahmed",
+    role: "Head of Engineering",
+    departments: ["management", "web"],
+    image: px(2379004, 600),
+    bio: "Runs engineering with obsessive standards: clean code, fast sites and weekly demos clients can actually follow.",
+  },
+  {
+    name: "Sajib Hossain",
+    role: "Full-stack Developer",
+    departments: ["web", "it-support"],
+    image: px(614810, 600),
+    bio: "Builds the backbone of every project and keeps it standing after launch: deployments, security and 99.9% uptime.",
+  },
+  {
+    name: "Mehrab Kabir",
+    role: "Frontend Developer",
+    departments: ["web"],
+    image: px(1043471, 600),
+    bio: "Turns designs into buttery-fast interfaces with obsessive attention to animation, accessibility and Core Web Vitals.",
+  },
+  {
+    name: "Rifat Rahman",
+    role: "Web Designer",
+    departments: ["web", "design"],
+    image: px(1065084, 600),
+    bio: "Designs marketing sites that convert. Believes whitespace is a feature and every pixel should earn its place.",
+  },
+  {
+    name: "Sharmin Sultana",
+    role: "UI/UX Designer",
+    departments: ["web", "design"],
+    image: px(1681010, 600),
+    bio: "Runs user research, wireframes and prototypes. Tests every screen with real users before a line of code is written.",
+  },
+  {
+    name: "Emon Karim",
+    role: "Brand Designer",
+    departments: ["design"],
+    image: px(1181686, 600),
+    bio: "Builds identity systems that make startups look established and established brands look unmistakable.",
+  },
+  {
+    name: "Tasnuva Akter",
+    role: "Graphic Designer",
+    departments: ["design"],
+    image: px(1858175, 600),
+    bio: "Produces social creatives, ad banners and decks at volume, all on-brand and all on time, 48-hour turnarounds.",
+  },
+  {
+    name: "Farhana Islam",
+    role: "Growth Strategist",
+    departments: ["marketing"],
+    image: px(774909, 600),
+    bio: "Owns the numbers side of growth: SEO, paid media and funnels engineered for measurable, compounding ROI.",
+  },
+  {
+    name: "Nusrat Jahan",
+    role: "Head of Content & Strategy",
+    departments: ["management", "marketing"],
+    image: px(415829, 600),
+    bio: "Turns business goals into messaging, positioning and strategy that make agencies and brands sound unmistakably human.",
+  },
+  {
+    name: "Rakibul Islam",
+    role: "SEO Specialist",
+    departments: ["marketing"],
+    image: px(1222271, 600),
+    bio: "Technical audits, content strategy and link building. Lives in Search Console and ships rankings month after month.",
+  },
+  {
+    name: "Sadia Afrin",
+    role: "Paid Media Specialist",
+    departments: ["marketing"],
+    image: px(1239291, 600),
+    bio: "Runs Google and Meta campaigns with strict ROAS targets. Every taka of ad spend is measured, tested and reported.",
+  },
+  {
+    name: "Fahim Rahman",
+    role: "Video Editor & Motion Designer",
+    departments: ["video"],
+    image: px(1382731, 600),
+    bio: "Cuts films, reels and ads with hooks that hold attention in the first three seconds. Sound design is his superpower.",
+  },
+  {
+    name: "Mim Akter",
+    role: "Video Editor",
+    departments: ["video", "design"],
+    image: px(874158, 600),
+    bio: "Turns raw footage into scroll-stopping content, handling captions, color and pacing so every frame lands.",
+  },
+  {
+    name: "Nabil Hossain",
+    role: "IT Support Engineer",
+    departments: ["it-support"],
+    image: px(1573007, 600),
+    bio: "Keeps domains, hosting, email and client infrastructure healthy. The reason nothing ever goes down for long.",
+  },
+  {
+    name: "Sabrina Chowdhury",
+    role: "Backend Developer",
+    departments: ["web"],
+    image: px(733872, 600),
+    bio: "Designs APIs, databases and integrations that stay fast and stable as client projects scale past their first users.",
+  },
+  {
+    name: "Dina Rahman",
+    role: "Project Manager",
+    departments: ["management"],
+    image: px(3768914, 600),
+    bio: "Keeps sprints honest and calendars sane. Every client gets a weekly demo because Dina makes sure it happens.",
+  },
+  {
+    name: "Al Amin",
+    role: "Junior Developer",
+    departments: ["web"],
+    image: px(91227, 600),
+    bio: "Sharpening skills across the stack on internal experiments. Not listed on the public site yet.",
+    hidden: true,
+  },
+  {
+    name: "Shovon Das",
+    role: "Account Manager",
+    departments: ["management"],
+    image: px(3184611, 600),
+    bio: "Looks after long-term client accounts and renewals. Not listed on the public site yet.",
+    hidden: true,
+  },
+];
+
+/** Members visible on the public site, grouped tabs excluded. */
+export const activeTeamMembers = teamMembers.filter((m) => !m.hidden);
 
 /* ------------------------------------------------------------------ */
 /* Process                                                             */

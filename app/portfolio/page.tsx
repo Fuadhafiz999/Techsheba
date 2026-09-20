@@ -5,12 +5,14 @@ import { Reveal } from "@/components/shared/Reveal";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { PortfolioGrid } from "@/components/portfolio/PortfolioGrid";
 import { CTASection } from "@/components/home/CTASection";
+import { constructMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "Work & Case Studies",
   description:
     "Case studies across fintech, e-commerce, logistics, SaaS and travel, with the numbers to prove it.",
-};
+  path: "/portfolio",
+});
 
 export default function PortfolioPage() {
   return (

@@ -3,17 +3,20 @@ import Image from "next/image";
 import { Compass, Gem, HeartHandshake, Timer } from "lucide-react";
 
 import { px, siteConfig, stats } from "@/data/mockData";
+import { constructMetadata } from "@/lib/seo";
 import { Reveal } from "@/components/shared/Reveal";
 import { CountUp } from "@/components/shared/CountUp";
 import { StatsBand } from "@/components/home/StatsBand";
 import { WhyUsSection } from "@/components/home/WhyUsSection";
 import { CTASection } from "@/components/home/CTASection";
+import { TeamSection } from "@/components/about/TeamSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "About Us",
   description:
-    "Techsheba is a full-service digital agency from Dhaka, Bangladesh, building websites, apps, brands and campaigns for ambitious companies worldwide since 2017.",
-};
+    "Techsheba is a full-service digital agency from Dhaka, Bangladesh building websites, apps, brands and marketing for ambitious companies since 2017.",
+  path: "/about",
+});
 
 const values = [
   {
@@ -177,6 +180,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <TeamSection />
       <StatsBand />
       <WhyUsSection />
       <CTASection />

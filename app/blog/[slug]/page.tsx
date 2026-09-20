@@ -11,6 +11,7 @@ import { NewsletterForm } from "@/components/shared/NewsletterForm";
 import { ArticleBody } from "@/components/blog/ArticleBody";
 import { BlogCard, formatDate } from "@/components/blog/BlogCard";
 import { CTASection } from "@/components/home/CTASection";
+import { constructMetadata, siteUrl } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -22,19 +23,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) return {};
-  return {
+  return constructMetadata({
     title: post.title,
     description: post.excerpt,
-    openGraph: {
-      type: "article",
-      title: post.title,
-      description: post.excerpt,
-      images: [{ url: post.cover, width: 1200, height: 900 }],
-      publishedTime: post.date,
-      authors: [post.author.name],
-      tags: post.tags,
-    },
-  };
+    path: `/blog/${post.slug}`,
+    type: "article",
+    images: [{ url: post.cover, width: 1200, height: 900 }],
+    publishedTime: post.date,
+    authors: [post.author.name],
+  });
 }
 
 export default async function BlogArticlePage({ params }: Props) {
@@ -78,11 +75,35 @@ export default async function BlogArticlePage({ params }: Props) {
       },
     },
     keywords: post.tags.join(", "),
-    mainEntityOfPage: `https://${siteConfig.domain}/blog/${post.slug}`,
+    mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog & Resources",
+        item: `${siteUrl}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `${siteUrl}/blog/${post.slug}`,
+      },
+    ],
   };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <article>
         {/* Header */}
         <header className="relative overflow-hidden pt-28 pb-10 sm:pt-32 lg:pt-36">

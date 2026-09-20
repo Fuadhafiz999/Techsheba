@@ -12,9 +12,9 @@ export function WhatsAppButton() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with Techsheba on WhatsApp"
       className="group fixed right-6 bottom-6 z-40 hidden md:block"
     >
+      <span className="sr-only">Chat with Techsheba on WhatsApp</span>
       <span className="relative grid size-13 place-items-center">
         <span
           aria-hidden="true"

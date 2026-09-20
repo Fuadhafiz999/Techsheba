@@ -4,11 +4,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-import { caseStudies, getCaseStudy } from "@/data/mockData";
+import { caseStudies, getCaseStudy, siteConfig } from "@/data/mockData";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/shared/Reveal";
 import { CountUp } from "@/components/shared/CountUp";
 import { CTASection } from "@/components/home/CTASection";
+import { constructMetadata, siteUrl } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -20,10 +21,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const study = getCaseStudy(slug);
   if (!study) return {};
-  return {
+  return constructMetadata({
     title: study.title,
     description: study.short,
-  };
+    path: `/portfolio/${study.slug}`,
+    images: [{ url: study.cover, width: 1200, height: 900 }],
+  });
 }
 
 export default async function CaseStudyPage({ params }: Props) {
@@ -34,8 +37,56 @@ export default async function CaseStudyPage({ params }: Props) {
   const index = caseStudies.findIndex((c) => c.slug === study.slug);
   const next = caseStudies[(index + 1) % caseStudies.length];
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: study.title,
+    description: study.short,
+    image: study.cover,
+    author: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteUrl,
+    },
+    about: study.tags.join(", "),
+    mainEntityOfPage: `${siteUrl}/portfolio/${study.slug}`,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Work & Case Studies",
+        item: `${siteUrl}/portfolio`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: study.title,
+        item: `${siteUrl}/portfolio/${study.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Hero */}
       <section className="relative pt-24 lg:pt-28">
         <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">

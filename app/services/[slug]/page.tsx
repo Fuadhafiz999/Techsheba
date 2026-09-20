@@ -15,6 +15,7 @@ import { Reveal } from "@/components/shared/Reveal";
 import { ProblemSolution } from "@/components/services/ProblemSolution";
 import { PortfolioCard } from "@/components/portfolio/PortfolioCard";
 import { CTASection } from "@/components/home/CTASection";
+import { constructMetadata, siteUrl } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -26,10 +27,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) return {};
-  return {
+  return constructMetadata({
     title: service.title,
     description: service.description,
-  };
+    path: `/services/${service.slug}`,
+    images: [{ url: service.image, width: 1200 }],
+  });
 }
 
 export default async function ServiceDetailPage({ params }: Props) {
@@ -42,8 +45,52 @@ export default async function ServiceDetailPage({ params }: Props) {
     `Hi Techsheba! I'm interested in your ${service.title} service.`
   )}`;
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    description: service.description,
+    serviceType: service.category,
+    provider: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteUrl,
+    },
+    areaServed: "Worldwide",
+    url: `${siteUrl}/services/${service.slug}`,
+    image: service.image,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${siteUrl}/services`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.title,
+        item: `${siteUrl}/services/${service.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden pt-32 pb-16 sm:pt-40 lg:pt-44">
         <div aria-hidden="true" className="absolute inset-0 -z-10">

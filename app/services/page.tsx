@@ -2,17 +2,19 @@ import type { Metadata } from "next";
 import { ArrowRight, Layers } from "lucide-react";
 
 import { serviceCategories, services } from "@/data/mockData";
+import { constructMetadata } from "@/lib/seo";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Reveal } from "@/components/shared/Reveal";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { ServiceCard } from "@/components/services/ServiceCard";
 import { CTASection } from "@/components/home/CTASection";
 
-export const metadata: Metadata = {
-  title: "Services",
+export const metadata: Metadata = constructMetadata({
+  title: "Web, Design & Marketing Services",
   description:
-    "Web development, mobile apps, UI/UX design, branding, digital marketing and motion graphics: full-stack services from one accountable team.",
-};
+    "Web development, mobile apps, UI/UX design, branding, digital marketing and motion graphics from one accountable digital agency in Dhaka.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

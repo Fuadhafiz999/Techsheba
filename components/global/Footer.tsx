@@ -33,9 +33,9 @@ export function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={label}
                   className="grid size-9 place-items-center rounded-full border border-border bg-surface-raised text-muted-foreground transition hover:border-brand-500/40 hover:text-foreground"
                 >
+                  <span className="sr-only">{label}</span>
                   <Icon className="size-4" />
                 </a>
               ))}

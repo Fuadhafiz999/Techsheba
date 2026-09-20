@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import { ArrowLeft } from "lucide-react";
 
 import { CTAButton } from "@/components/shared/CTAButton";
+
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  robots: { index: false, follow: false },
+};
 
 export default function NotFound() {
   return (

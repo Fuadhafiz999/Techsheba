@@ -5,12 +5,14 @@ import { Reveal } from "@/components/shared/Reveal";
 import { NewsletterForm } from "@/components/shared/NewsletterForm";
 import { BlogGrid } from "@/components/blog/BlogGrid";
 import { CTASection } from "@/components/home/CTASection";
+import { constructMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = constructMetadata({
   title: "Blog & Resources",
   description:
     "Practical guides on web performance, e-commerce conversion, digital marketing and pricing, from the Techsheba team in Dhaka.",
-};
+  path: "/blog",
+});
 
 export default function BlogPage() {
   return (
